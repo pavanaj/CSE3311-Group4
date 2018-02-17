@@ -5,3 +5,6 @@ This is a repository for a Software Engineering Team Project for a Asset Managem
 * Pavanaj Biyani 
 * Ethan Duff
 * Kevin Williams
+
+## Current Status
+  Iteration 1
