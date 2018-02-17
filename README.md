@@ -1,4 +1,4 @@
-![alt text](C:\Users\biyan\OneDrive - University of Texas at Arlington\College\Spring 2018\Subjects\CSE 3311-002\Project\AMA.png)
+![alt text](https://raw.githubusercontent.com/pavanaj/CSE3311-Group4/master/AMA.png)
 
 # CSE3311-Group4
 This is a repository for a Software Engineering Team Project for a Asset Management System
