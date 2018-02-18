@@ -66,3 +66,5 @@ CREATE TABLE Accounts (
         REFERENCES Assets (TagNo)
         ON UPDATE CASCADE
 );
+
+      
