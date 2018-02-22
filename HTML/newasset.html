@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type=date]{
+  width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-indigo">
+  <a href="index.html" class="w3-button w3-bar-item">Home</a>
+  <div class="w3-dropdown-hover">
+      <button class="w3-button">Assets</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="newasset.html" class="w3-bar-item w3-button w3-hover-orange">New Asset</a>
+        <a href="work.html" class="w3-bar-item w3-button w3-hover-orange">Lookup Asset(s)</a>
+        <a href="work.html" class="w3-bar-item w3-button w3-hover-orange">Update Asset</a>
+      </div>
+  </div>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Custodians</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="work.html" class="w3-bar-item w3-button w3-hover-orange">New Custodian</a>
+        <a href="work.html" class="w3-bar-item w3-button w3-hover-orange">View Assets</a>
+        <a href="work.html" class="w3-bar-item w3-button w3-hover-orange">Update Custodian</a>
+        <a href="work.html" class="w3-bar-item w3-button w3-hover-orange">View All</a>
+      </div>
+  </div>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Checkout</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="work.html" class="w3-bar-item w3-button w3-hover-orange">Asset Checkout</a>
+        <a href="work.html" class="w3-bar-item w3-button w3-hover-orange">Asset Checkin</a>
+        <a href="work.html" class="w3-bar-item w3-button w3-hover-orange">View Checkouts</a>
+      </div>
+  </div>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Accounts</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="work.html" class="w3-bar-item w3-button w3-hover-orange">View Acct Info</a>
+        <a href="work.html" class="w3-bar-item w3-button w3-hover-orange">Update Acct Info</a>
+        <a href="work.html" class="w3-bar-item w3-button w3-hover-orange">File Report</a>
+      </div>
+  </div>
+</nav>
+
+<h2 align="center">New Asset Entry Form</h2>
+
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="tagno">Tag Number</label>
+      </div>
+      <div class="col-25">
+        <input type="text" id="tagno" name="tagno" placeholder="Enter 6-digit T/N">
+      </div>
+      <div class="col-25">
+        <label for="serialno">Serial Number</label>
+      </div>
+      <div class="col-25">
+        <input type="text" id="serialno" name="serialno" placeholder="Enter S/N if applicable">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="type">Type</label>
+      </div>
+      <div class="col-25">
+        <select id="type" name="type">
+          <option value="computer">Computer</option>
+          <option value="laptop">Laptop</option>
+          <option value="camera">Camera</option>
+          <option value="scanner">Scanner</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="col-25">
+        <label for="date">Acquisition Date</label>
+      </div>
+      <div class="col-25">
+      <input id="date" type="date" value="2018-01-01">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="description">Description</label>
+      </div>
+      <div class="col-75">
+        <textarea id="description" name="description" placeholder="Write a description about the Asset" style="height:75px"></textarea>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="building">Building</label>
+      </div>
+      <div class="col-25">
+        <input type="text" id="building" name="building" placeholder="Enter Building name or code">
+      </div>
+      <div class="col-25">
+        <label for="room">Room</label>
+      </div>
+      <div class="col-25">
+        <input type="text" id="room" name="room" placeholder="Enter Room No">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="empid">Employee ID</label>
+      </div>
+      <div class="col-25">
+        <input type="text" id="empid" name="empid" placeholder="Enter Employee/UTA ID">
+      </div>
+      <div class="col-25">
+        <label for="name">Custodian Name</label>
+      </div>
+      <div class="col-25">
+        <input type="text" id="name" name="name" placeholder="Enter Custodian's Name">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="building">Building</label>
+      </div>
+      <div class="col-25">
+        <input type="text" id="building" name="building" placeholder="Enter Building name or code">
+      </div>
+      <div class="col-25">
+        <label for="room">Room</label>
+      </div>
+      <div class="col-25">
+        <input type="text" id="room" name="room" placeholder="Enter Room No">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="cost">Cost</label>
+      </div>
+      <div class="col-25">
+        <input type="text" id="cost" name="cost" placeholder="Enter Cost in $$">
+      </div>
+      <div class="col-25">
+        <label for="funds">Source of Funds</label>
+      </div>
+      <div class="col-25">
+        <input type="text" id="funds" name="funds" placeholder="Enter Source of Funds">
+      </div>
+    </div>
+    
+    <div class="row">
+      <p>    </p>
+    </div>
+    
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-30 w3-center w3-orange">
+  <p class="w3-medium">
+  <img src="AMA.png" height="100" width="250"/>
+  </p>
+  <p>
+    Developers: Pavanaj Biyani | Ethan Duff | Kevin Willians 
+  </p>
+</footer>
+
+</body>
+</html>
