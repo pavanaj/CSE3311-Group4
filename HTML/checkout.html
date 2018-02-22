@@ -139,7 +139,7 @@ input[type=submit]:hover {
   </div>
 </nav>
 
-<h2 align="center">New Asset Entry Form</h2>
+<h2 align="center">Asset Checkout Form</h2>
 
 <div class="container">
   <form action="work.html">
@@ -157,77 +157,19 @@ input[type=submit]:hover {
         <input type="text" id="serialno" name="serialno" placeholder="Enter S/N if applicable">
       </div>
     </div>
+ 
     <div class="row">
       <div class="col-25">
-        <label for="type">Type</label>
+        <label for="empid">Member ID</label>
       </div>
       <div class="col-25">
-        <select id="type" name="type">
-          <option value="computer">Computer</option>
-          <option value="laptop">Laptop</option>
-          <option value="camera">Camera</option>
-          <option value="scanner">Scanner</option>
-          <option value="other">Other</option>
-        </select>
+        <input type="text" id="empid" name="empid" placeholder="Enter Member/UTA ID">
       </div>
       <div class="col-25">
-        <label for="date">Acquisition Date</label>
+        <label for="name">Member Name</label>
       </div>
       <div class="col-25">
-      <input id="date" type="date" value="2018-01-01">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="description">Description</label>
-      </div>
-      <div class="col-75">
-        <textarea id="description" name="description" placeholder="Write a description about the Asset" style="height:75px"></textarea>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-25">
-        <label for="building">Building</label>
-      </div>
-      <div class="col-25">
-        <input type="text" id="building" name="building" placeholder="Enter Building for Asset">
-      </div>
-      <div class="col-25">
-        <label for="room">Room</label>
-      </div>
-      <div class="col-25">
-        <input type="text" id="room" name="room" placeholder="Enter Room No for Asset">
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-25">
-        <label for="empid">Employee ID</label>
-      </div>
-      <div class="col-25">
-        <input type="text" id="empid" name="empid" placeholder="Enter Employee/UTA ID">
-      </div>
-      <div class="col-25">
-        <label for="name">Custodian Name</label>
-      </div>
-      <div class="col-25">
-        <input type="text" id="name" name="name" placeholder="Enter Custodian's Name">
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-25">
-        <label for="building">Building</label>
-      </div>
-      <div class="col-25">
-        <input type="text" id="building" name="building" placeholder="Enter Building of Custodian">
-      </div>
-      <div class="col-25">
-        <label for="room">Room</label>
-      </div>
-      <div class="col-25">
-        <input type="text" id="room" name="room" placeholder="Enter Room No of Custodian">
+        <input type="text" id="name" name="name" placeholder="Enter Member's Name">
       </div>
     </div>
     
@@ -239,31 +181,10 @@ input[type=submit]:hover {
         <input type="text" id="email" name="email" placeholder="Enter email id of Custodian">
       </div>
       <div class="col-25">
-        <label for="status">Status</label>
+        <label for="date">Checkout Date</label>
       </div>
       <div class="col-25">
-        <select id="type" name="type">
-          <option value="active">Active</option>
-          <option value="stolen">Missing(Stolen)</option>
-          <option value="delete">Missing(Hold for Deletion)</option>
-          <option value="surplus">Surplus</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-25">
-        <label for="cost">Cost</label>
-      </div>
-      <div class="col-25">
-        <input type="text" id="cost" name="cost" placeholder="Enter Cost in $$">
-      </div>
-      <div class="col-25">
-        <label for="funds">Source of Funds</label>
-      </div>
-      <div class="col-25">
-        <input type="text" id="funds" name="funds" placeholder="Enter Source of Funds">
+      <input id="date" type="date" value="2018-01-01">
       </div>
     </div>
     
