@@ -1,5 +1,5 @@
 <p align=center>
- <img src="https://raw.githubusercontent.com/pavanaj/CSE3311-Group4/master/AMA.png"/>
+ <img src="https://raw.githubusercontent.com/pavanaj/CSE3311-Group4/master/AMA logo.png"/>
 </p>
 
 # CSE3311-Group4
