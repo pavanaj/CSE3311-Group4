@@ -66,18 +66,23 @@ input[type=submit]:hover {
     margin-top: 6px;
 }
 
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
 .col-15 {
     float: left;
     width: 15%;
     margin-top: 6px;
 }
 
-.col-75 {
-    float: center;
-    width: 75%;
+.col-45 {
+    float: left;
+    width: 45%;
     margin-top: 6px;
 }
-
 /* Clear floats after the columns */
 .row:after {
     content: "";
@@ -134,7 +139,7 @@ input[type=submit]:hover {
   </div>
 </nav>
 
-<h2 align="center">Update Asset Form</h2>
+<h2 align="center">Asset Check-In Form</h2>
 
 <div class="container">
   <form action="work.html">
@@ -143,29 +148,39 @@ input[type=submit]:hover {
         <label for="tagno">Tag Number</label>
       </div>
       <div class="col-25">
-        <input type="text" id="tagno" name="tagno" placeholder="Enter Tag/N if known">
+        <input type="text" id="tagno" name="tagno" placeholder="Enter 6-digit T/N">
       </div>
     </div>
-    <div class="row-25">
+ 
+    <div class="row">
       <div class="col-25">
         <label for="serialno">Serial Number</label>
       </div>
       <div class="col-25">
-        <input type="text" id="serialno" name="serialno" placeholder="Enter S/N if known">
+        <input type="text" id="serialno" name="serialno" placeholder="Enter S/N if applicable">
+      </div>
+    </div>
+        
+    <div class="row">
+      <div class="col-25">
+        <label for="return">Check-in Date</label>
+      </div>
+      <div class="col-25">
+        <input id="date" type="date" value="2018-12-31">
       </div>
     </div>
     
     <div class="row">
       <p>    </p>
     </div>
-        <div class="row">
-      <p>    </p>
-    </div>
+    
     <div class="row">
-      <div class="col-25">
-        <input type="submit" value="Update">
+      <div class="col-45">
+         <input type="submit" value="Submit">
       </div>
-      
+      <div class="col-15">
+        <input type="reset" value="Reset">
+      </div>
     </div>
   </form>
 </div>

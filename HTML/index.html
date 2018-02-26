@@ -7,7 +7,7 @@
 <body>
 
 <!-- Navigation -->
-<nav class="w3-bar w3-indigo">
+<nav class="w3-bar w3-indigo w3-container">
   <a href="index.html" class="w3-button w3-bar-item">Home</a>
   <div class="w3-dropdown-hover">
       <button class="w3-button">Assets</button>
@@ -45,11 +45,12 @@
 </nav>
 
 <!-- Slide Show -->
-<section>
+<section class="w3-container w3-padding-16">
+  <img class="mySlides" src="icons/desktop.png" style="width:20%">
   <img class="mySlides" src="icons/ipad.png" style="width:20%">
   <img class="mySlides" src="icons/laptop.png" style="width:20%">
   <img class="mySlides" src="icons/projector.png" style="width:20%">
-  <img class="mySlides" src="icons/scanner.png" style="width:20%">
+  <img class="mySlides" src="icons/camera.png" style="width:20%">
 </section>
 
 <script>
@@ -68,19 +69,19 @@ function carousel()
     }
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 3000);
+    x[myIndex-1].style.display = "flex";
+    setTimeout(carousel, 2500);
 }
 
 </script>
 
-<section class="w3-container w3-center" style="max-width:600px">
+<section class="w3-container w3-content w3-center" style="max-width:600px">
   <h2 class="w3-wide">ASSET MANAGEMENT APP</h2>
   <p class="w3-opacity"><i>CSE Department's own Asset Management System</i></p>
 </section>
 
-<section class="w3-container w3-content w3-center" style="max-width:1000px">
-<p class="w3-justify">
+<section class="w3-container w3-content w3-center" style="max-width:700px">
+<p class="w3-center">
 This web application is provided to the Accountants of the CSE department at UTA to better manage the Assets and Custodians of the department.
 </p>
 </section>
