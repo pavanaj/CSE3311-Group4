@@ -1,0 +1,72 @@
+-- Insert Mock Data into Tables
+
+INSERT INTO Custodians VALUES 
+('1000000001', 'John Doe',  'John.Doe@uta.edu', 'ERB', '530'), 
+('1000000002', 'Jane Doe', 'Jane.Doe@uta.edu', 'NH', '220'),
+('1000000003', 'Tom Parks', 'Tom.Parks@uta.edu', 'ERB', '410'), 
+('1000000004', 'Bill Stevens', 'Bill.Stevens@uta.edu', 'WH', '312'),
+('1000000005', 'Samantha Smith', 'Samatha.Smith@uta.edu', 'ERB', '308'), 
+('1000000006', 'Steve Williams',  'Steve.Williams@uta.edu', 'ERB', '210'),
+('1000000007', 'Jim Thomas', 'Jim.Thomas@uta.edu', 'WH', '315'), 
+('1000000008', 'Benedict Palmer', 'Benedict.Palmer@uta.edu', 'NH',  '512'),
+('1000000009', 'Beatrice Reynolds', 'Beatrice.Reynolds@uta.edu', 'ERB', '324'), 
+('1000000010', 'Kimberly McAllen', 'Kimberly.McAllen@uta.edu', 'NH', '408'),
+('1000000011', 'Madison Jackson', 'Madison.Jackson@uta.edu', 'WH', '216'), 
+('1000000012', 'Robert Murdoch', 'Robert.Murdoch@uta.edu', 'WH', '109'),
+('1000000013', 'Kristin Paulson', 'Kristin.Paulson@uta.edu', 'NH', '118'), 
+('1000000014', 'Timothy McCarthy', 'Timothy.McCarthy@uta.edu', 'ERB', '612'),
+('1000000015', 'Christina Weathers', 'Christina.Weathers@uta.edu', 'ERB', '620'), 
+('1000000016', 'David Walker', 'David.Walkers@uta.edu', 'NH', '520'),
+('1000000017', 'Lisa Franks', 'Lisa.Franks@uta.edu', 'ERB', '207'), 
+('1000000018', 'Dana Davidson', 'Dana.Davidson@uta.edu', 'WH', '415'),
+('1000000019', 'Michael Roberts', 'Michael.Roberts@uta.edu', 'WH', '211'), 
+('1000000020', 'Jennifer Meyers', 'Jennifer.Meyers@uta.edu', 'ERB', '112');
+
+INSERT INTO Assets VALUES 
+('000001', 'zDb344pk', 'Black Lenovo 15 inch laptop. 2.4 ghz','Laptop', '1000000005','2018-01-26','ERB','100', 'Active'),
+('000002', 'u3VlA803', 'Dell desktop computer, 3.2 ghz', 'Desktop','1000000011', '2018-02-14','NH','222', 'Active'),
+('000003', '321nST22', 'iPad 2 16gb, white', 'Tablet/iPad', '1000000013', '2018-01-01','ERB','300', 'Missing(Hold for Deletion'),
+('000004', '800IuHCS', 'MacBook Pro 14 inch 2.4 ghz', 'Laptop', '1000000003', '2018-01-04','ERB','131', 'Active'),
+('000005', 'OP7y2aRL', 'Black Lenovo 15 inch laptop. 2.4 ghz', 'Laptop', '1000000019', '2017-11-24','NH','533','Active'),
+('000006', 'IuV372b1', 'Acer Inspire laptop 2.8 ghz', 'Laptop', '1000000015', '2017-12-22','ERB','111', 'Missing(Stolen)'),
+('000007', 'Kj109Tt4', 'iPad 1, white', 'Tablet', '1000000013', '2018-02-04','ERB','234', 'Surplus'),
+('000008', 'H76zQ6m0', 'Dell desktop computer, 2.6 ghz, 8 gigs of ram', 'Desktop', '1000000002','2017-10-30','ERB','641', 'Active'),
+('000009', '1123Fn94', 'Acer Inspire Laptop 2.8 ghz', 'Laptop', '1000000010', '2017-11-11','ELB', '211', 'Active'),
+('000010', '36BsUI58', 'IBM Laptop 14 inch 2.2 ghz', 'Laptop', '1000000009' , '2017-05-11', 'ERB' , '622', 'Surplus'), 
+('000011', '78JiX0vC', 'White MacBook 4.2 ghz', 'Laptop',  '1000000017', '2018-01-20','NH','432', 'Active'),
+('000012', 'YE23vMiK', 'HP Desktop computer, 2.0  ghz 12 gb of ram', 'Desktop', '1000000001', '2017-09-27','ERB','331', 'Active'),
+('000013', '03bDE48N', 'Canon 13MP black', 'Camera', '1000000007', '2017-12-25','ERB','542', 'Active'),
+('000014', 'J9f72aDo', 'HP Desktop, 3.2 ghz', 'Desktop', '1000000005', '2017-01-15', 'ERB', '333', 'Surplus'),
+('000015', 'I31nmS0L', 'Lenovo Thinkpad 14 inch tablet', 'Tablet', '1000000010', '2017-10-25','NH','124','Active'),
+('000016', '8lmAq6kP', 'HP 13 inch laptop, 3.0 ghz', 'Laptop', '1000000020', '2018-02-10','ERB','432', 'Active'),
+('000017', 'Ka73Hu9s', 'Lenovo Desktop Computer, 2.8 ghz', 'Desktop', '1000000018', '2017-11-19','ERB' ,'601' , 'Missing(Stolen)'),
+('000018', 'P05kN4bQ', 'iPad 2, White', 'Tablet','1000000008', '2017-12-05','ERB' , '543', 'Active'),
+('000019', '266naFt0', 'Dell 15 inch laptop, black', 'Laptop', '1000000012', '2017-10-28','ERB','301', 'Missing(Hold for Deletion)'),
+('000020', 'L3nA47ls', 'Minolta 15MP white', 'Camera', '1000000015', '2018-01-19', 'ERB','650', 'Active');
+
+INSERT INTO Accounts VALUES
+('000001', 1500, 'CSE Dept', NULL, NULL), 
+('000002', 1200, 'CSE Dept', NULL, NULL),
+('000003', 500, 'Research', NULL, NULL),
+('000004', 2000, 'CSE Dept', NULL, NULL),
+('000005', 1400, 'Research', NULL, NULL),
+('000006', 1900, 'CSE Dept', '2018-000-6789', '2018-01-10'),
+('000007', 300, 'CSE Dept', NULL, NULL),
+('000008', 1000, 'Research', NULL, NULL),
+('000009', 1200, 'CSE Dept', NULL, NULL),
+('000010', 2000, 'L3 Grant', NULL, NULL), 
+('000011', 1800, 'CSE Dept', NULL, NULL),
+('000012', 1200, 'LM Grant', NULL, NULL),
+('000013', 300, 'CSE Dept', NULL, NULL),
+('000014', 1100, 'CSE Dept', NULL, NULL),
+('000015', 900, 'COE Funds', NULL, NULL),
+('000016', 1700, 'CSE Dept', NULL, NULL),
+('000017', 1300, 'COE Funds', '2018-000-1234', '2018-02-02'),
+('000018', 400, 'CSE Dept', NULL, NULL),
+('000019', 1200, 'COE Funds', NULL, NULL),
+('000020', 300, 'CSE Dept', NULL, NULL);
+
+INSERT INTO Checkout VALUES
+('000004', '1000001234', 'Robert Downey', 'robert.downey@uta.edu', '2018-03-01', '2018-03-06', '2018-03-07'),
+('000013', '1000066781', 'Chris Hemsworth', 'chris.hemsworth@mavs.uta.edu', '2018-02-28', '2018-03-11', NULL), 
+('000016', '1000008911', 'Mark Ruffalo', 'mark.ruffalo@mavs.uta.edu', '2018-03-10', '2018-04-01', NULL);
