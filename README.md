@@ -11,4 +11,8 @@ This is a repository for a Software Engineering Team Project for a Asset Managem
 * Kevin Williams
 
 ## Current Status
-  Iteration 1
+  Iteration 2
+  * Finished Tutorial 1
+  * Finalized DB, mock data ready to use
+  * Website structure is ready to use
+  * Working on python integration
