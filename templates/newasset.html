@@ -155,16 +155,16 @@ input[type=submit]:hover {
 <h2 align="center">New Asset Entry Form</h2>
 
 <div class="container">
-  <form action="work.html">
+  <form action="work.html" method="POST">
       <div class="row">
-      <h3> Asset Info  </h3>
+      <h3> <u> Asset Info </u> </h3>
     </div>
     <div class="row">
       <div class="col-10">
         <label for="tagno">Tag Number</label>
       </div>
       <div class="col-15">
-        <input type="text" id="tagno" name="tagno" placeholder="Enter 6-digit T/N">
+        <input type="text" id="tagno" name="tagno" placeholder="Enter 6-digit T/N" minlengh="6" maxlength="6" required> 
       </div>
        <div class="col-10">
        </div>
@@ -222,9 +222,11 @@ input[type=submit]:hover {
         <input type="text" id="room" name="room" placeholder="Room No for Asset">
       </div>
     </div>
-    
+        <div class="row">
+      <p>  </p>
+    </div>
     <div class="row">
-        <h3> Custodian's Info  </h3>
+        <h3> <u> Custodian's Info </u> </h3>
     </div>
     
     <div class="row">
@@ -269,10 +271,12 @@ input[type=submit]:hover {
         <input type="text" id="email" name="email" placeholder="Enter email id of Custodian">
       </div>
     </div>
-       
+           <div class="row">
+      <p>  </p>
+    </div>
        
     <div class="row">
-        <h3> Accounting Info  </h3>
+        <h3> <u> Accounting Info </u> </h3>
     </div>
     
     <div class="row">
