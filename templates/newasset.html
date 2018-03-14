@@ -72,15 +72,28 @@ input[type=submit]:hover {
     margin-top: 6px;
 }
 
+
+.col-50 {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+}
+
 .col-15 {
     float: left;
     width: 15%;
     margin-top: 6px;
 }
 
-.col-45 {
+.col-10 {
     float: left;
-    width: 45%;
+    width: 10%;
+    margin-top: 6px;
+}
+
+.col-30 {
+    float: left;
+    width: 30%;
     margin-top: 6px;
 }
 /* Clear floats after the columns */
@@ -142,26 +155,31 @@ input[type=submit]:hover {
 <h2 align="center">New Asset Entry Form</h2>
 
 <div class="container">
-  <form action="work.html">
+  <form action="work.html" method="POST">
+      <div class="row">
+      <h3> <u> Asset Info </u> </h3>
+    </div>
     <div class="row">
-      <div class="col-25">
+      <div class="col-10">
         <label for="tagno">Tag Number</label>
       </div>
-      <div class="col-25">
-        <input type="text" id="tagno" name="tagno" placeholder="Enter 6-digit T/N">
+      <div class="col-15">
+        <input type="text" id="tagno" name="tagno" placeholder="Enter 6-digit T/N" minlengh="6" maxlength="6" required> 
       </div>
-      <div class="col-25">
+       <div class="col-10">
+       </div>
+      <div class="col-10">
         <label for="serialno">Serial Number</label>
       </div>
-      <div class="col-25">
+      <div class="col-15">
         <input type="text" id="serialno" name="serialno" placeholder="Enter S/N if applicable">
       </div>
     </div>
     <div class="row">
-      <div class="col-25">
+      <div class="col-10">
         <label for="type">Type</label>
       </div>
-      <div class="col-25">
+      <div class="col-15">
         <select id="type" name="type">
           <option value="computer">Desktop</option>
           <option value="laptop">Laptop</option>
@@ -169,79 +187,119 @@ input[type=submit]:hover {
           <option value="scanner">Tablet/iPad</option>
           <option value="other">Other</option>
         </select>
-      </div>
-      <div class="col-25">
+      </div>           
+       <div class="col-10">
+       </div>
+      <div class="col-10">
         <label for="date">Acquisition Date</label>
       </div>
-      <div class="col-25">
+      <div class="col-15">
       <input id="date" type="date" value="2018-01-01">
       </div>
     </div>
     <div class="row">
-      <div class="col-25">
+      <div class="col-10">
         <label for="description">Description</label>
       </div>
-      <div class="col-75">
+      <div class="col-50">
         <textarea id="description" name="description" placeholder="Write a description about the Asset" style="height:75px"></textarea>
       </div>
     </div>
     
     <div class="row">
-      <div class="col-25">
+      <div class="col-10">
         <label for="building">Building</label>
       </div>
-      <div class="col-25">
-        <input type="text" id="building" name="building" placeholder="Enter Building for Asset">
+      <div class="col-15">
+        <input type="text" id="building" name="building" placeholder="Building for Asset">
       </div>
-      <div class="col-25">
+      <div class="col-10">
+       </div>
+      <div class="col-10">
         <label for="room">Room</label>
       </div>
-      <div class="col-25">
-        <input type="text" id="room" name="room" placeholder="Enter Room No for Asset">
+      <div class="col-15">
+        <input type="text" id="room" name="room" placeholder="Room No for Asset">
       </div>
+    </div>
+        <div class="row">
+      <p>  </p>
+    </div>
+    <div class="row">
+        <h3> <u> Custodian's Info </u> </h3>
     </div>
     
     <div class="row">
-      <div class="col-25">
-        <label for="empid">Employee ID</label>
+      <div class="col-10">
+        <label for="empid">Custodian ID</label>
       </div>
-      <div class="col-25">
-        <input type="text" id="empid" name="empid" placeholder="Enter Employee/UTA ID">
+      <div class="col-15">
+        <input type="text" id="empid" name="empid" placeholder="Custodian's ID">
       </div>
-      <div class="col-25">
+      <div class="col-10">
+       </div>
+      <div class="col-10">
         <label for="name">Custodian Name</label>
       </div>
-      <div class="col-25">
-        <input type="text" id="name" name="name" placeholder="Enter Custodian's Name">
+      <div class="col-15">
+        <input type="text" id="name" name="name" placeholder="Custodian's Name">
       </div>
     </div>
     
     <div class="row">
-      <div class="col-25">
+      <div class="col-10">
         <label for="building">Building</label>
       </div>
-      <div class="col-25">
-        <input type="text" id="building" name="building" placeholder="Enter Building of Custodian">
+      <div class="col-15">
+        <input type="text" id="building" name="building" placeholder="Building of Custodian">
       </div>
-      <div class="col-25">
+      <div class="col-10">
+       </div>
+      <div class="col-10">
         <label for="room">Room</label>
       </div>
-      <div class="col-25">
-        <input type="text" id="room" name="room" placeholder="Enter Room No of Custodian">
+      <div class="col-15">
+        <input type="text" id="room" name="room" placeholder="Room No of Custodian">
       </div>
     </div>
     
     <div class="row">
-      <div class="col-25">
+      <div class="col-10">
         <label for="email">Email</label>
       </div>
-      <div class="col-25">
+      <div class="col-15">
         <input type="text" id="email" name="email" placeholder="Enter email id of Custodian">
       </div>
-      <div class="col-25">
+    </div>
+           <div class="row">
+      <p>  </p>
+    </div>
+       
+    <div class="row">
+        <h3> <u> Accounting Info </u> </h3>
+    </div>
+    
+    <div class="row">
+      <div class="col-10">
+        <label for="cost">Cost</label>
+      </div>
+      <div class="col-15">
+        <input type="text" id="cost" name="cost" placeholder="Enter Cost in $$">
+      </div>
+      <div class="col-10">
+       </div>
+      <div class="col-10">
+        <label for="funds">Source of Funds</label>
+      </div>
+      <div class="col-15">
+        <input type="text" id="funds" name="funds" placeholder="Enter Source of Funds">
+      </div>
+    </div>
+    
+          <div class="col-10">
         <label for="status">Status</label>
       </div>
-      <div class="col-25">
+            <div class="col-15">
         <select id="type" name="type">
           <option value="active">Active</option>
           <option value="stolen">Missing(Stolen)</option>
@@ -250,33 +308,17 @@ input[type=submit]:hover {
           <option value="other">Other</option>
         </select>
       </div>
+    
+    <div class="row">
+      <p>  </p>
     </div>
     
     <div class="row">
-      <div class="col-25">
-        <label for="cost">Cost</label>
-      </div>
-      <div class="col-25">
-        <input type="text" id="cost" name="cost" placeholder="Enter Cost in $$">
-      </div>
-      <div class="col-25">
-        <label for="funds">Source of Funds</label>
-      </div>
-      <div class="col-25">
-        <input type="text" id="funds" name="funds" placeholder="Enter Source of Funds">
-      </div>
-    </div>
-    
-    <div class="row">
-      <p>    </p>
-    </div>
-    
-    <div class="row">
-      <div class="col-45">
+      <div class="col-30">
          <input type="submit" value="Submit">
       </div>
       <div class="col-15">
-        <input type="reset" value="Reset">
+        <input type="reset" value="Clear">
       </div>
     </div>
   </form>
