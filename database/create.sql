@@ -1,9 +1,12 @@
 -- Create Tables & Constraints
-    
+DROP DATABASE IF EXISTS AssetManager;    
 DROP TABLE IF EXISTS Checkout;
 DROP TABLE IF EXISTS Accounts;
 DROP TABLE IF EXISTS Assets;
 DROP TABLE IF EXISTS Custodians;
+
+CREATE DATABASE AssetManager;
+USE AssetManager;
 
 CREATE TABLE Custodians (
     EmpID CHAR(10) NOT NULL,
