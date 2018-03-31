@@ -25,7 +25,7 @@ INSERT INTO Custodians VALUES
 INSERT INTO Assets VALUES 
 ('000001', 'zDb344pk', 'Black Lenovo 15 inch laptop. 2.4 ghz','Laptop', '1000000005','2018-01-26','ERB','100', 'Active'),
 ('000002', 'u3VlA803', 'Dell desktop computer, 3.2 ghz', 'Desktop','1000000011', '2018-02-14','NH','222', 'Active'),
-('000003', '321nST22', 'iPad 2 16gb, white', 'Tablet/iPad', '1000000013', '2018-01-01','ERB','300', 'Missing(Hold for Deletion'),
+('000003', '321nST22', 'iPad 2 16gb, white', 'Tablet/iPad', '1000000013', '2018-01-01','ERB','300', 'Missing(Hold for Deletion)'),
 ('000004', '800IuHCS', 'MacBook Pro 14 inch 2.4 ghz', 'Laptop', '1000000003', '2018-01-04','ERB','131', 'Active'),
 ('000005', 'OP7y2aRL', 'Black Lenovo 15 inch laptop. 2.4 ghz', 'Laptop', '1000000019', '2017-11-24','NH','533','Active'),
 ('000006', 'IuV372b1', 'Acer Inspire laptop 2.8 ghz', 'Laptop', '1000000015', '2017-12-22','ERB','111', 'Missing(Stolen)'),
@@ -67,6 +67,6 @@ INSERT INTO Accounts VALUES
 ('000020', 300, 'CSE Dept', NULL, NULL);
 
 INSERT INTO Checkout VALUES
-('000004', '1000001234', 'Robert Downey', 'robert.downey@uta.edu', '2018-03-01', '2018-03-06', '2018-03-07'),
-('000013', '1000066781', 'Chris Hemsworth', 'chris.hemsworth@mavs.uta.edu', '2018-02-28', '2018-03-11', NULL), 
-('000016', '1000008911', 'Mark Ruffalo', 'mark.ruffalo@mavs.uta.edu', '2018-03-10', '2018-04-01', NULL);
+('000004', '800IuHCS', '1000001234', 'Robert Downey', 'robert.downey@uta.edu', '2018-03-01', '2018-03-06', '2018-03-07'),
+('000013', '03bDE48N', '1000066781', 'Chris Hemsworth', 'chris.hemsworth@mavs.uta.edu', '2018-02-28', '2018-03-11', NULL), 
+('000016', '8lmAq6kP', '1000008911', 'Mark Ruffalo', 'mark.ruffalo@mavs.uta.edu', '2018-03-10', '2018-04-01', NULL);

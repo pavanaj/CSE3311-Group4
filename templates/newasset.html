@@ -15,7 +15,8 @@
   <div class="w3-dropdown-hover">
       <button class="w3-button">Assets</button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="newasset.html" class="w3-bar-item w3-button w3-hover-orange">New Asset</a>
+        <a href="newasset.html" class="w3-bar-item w3-button w3-hover-orange">New Asset(New Custodian)</a>
+        <a href="oldasset.html" class="w3-bar-item w3-button w3-hover-orange">New Asset(Old Custodian)</a>
         <a href="lookup.html" class="w3-bar-item w3-button w3-hover-orange">Lookup Asset(s)</a>
         <a href="updateasset.html" class="w3-bar-item w3-button w3-hover-orange">Update Asset</a>
       </div>
@@ -47,7 +48,7 @@
   </div>
 </nav>
 
-<h2 align="center">New Asset Entry Form</h2>
+<h2 align="center">New Asset - New Custodian</h2>
 
 <div class="container">
   <form action="work.html" method="POST">
@@ -143,18 +144,18 @@
     
     <div class="row">
       <div class="col-10">
-        <label for="building">Building</label>
+        <label for="custbldg">Building</label>
       </div>
       <div class="col-15">
-        <input type="text" id="building" name="building" placeholder="Bldg of Custodian">
+        <input type="text" id="custbldg" name="custbldg" placeholder="Bldg of Custodian">
       </div>
       <div class="col-10">
        </div>
       <div class="col-15">
-        <label for="room">Room</label>
+        <label for="custroom">Room</label>
       </div>
       <div class="col-15">
-        <input type="text" id="room" name="room" placeholder="RmNo of Custodian">
+        <input type="text" id="custroom" name="custroom" placeholder="RmNo of Custodian">
       </div>
     </div>
     
@@ -195,7 +196,7 @@
         <label for="status">Status</label>
       </div>
             <div class="col-15">
-        <select id="type" name="type">
+        <select id="status" name="status">
           <option value="active">Active</option>
           <option value="stolen">Missing(Stolen)</option>
           <option value="delete">Missing(Hold for Deletion)</option>
