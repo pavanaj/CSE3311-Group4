@@ -46,11 +46,11 @@
 
 <!-- Slide Show -->
 <section class="w3-container w3-padding-16">
-  <img class="mySlides" src="icons/desktop.png" style="width:20%">
-  <img class="mySlides" src="icons/ipad.png" style="width:20%">
-  <img class="mySlides" src="icons/laptop.png" style="width:20%">
-  <img class="mySlides" src="icons/projector.png" style="width:20%">
-  <img class="mySlides" src="icons/camera.png" style="width:20%">
+  <img class="mySlides" src="{{url_for('static', filename='desktop.png')}}" style="width:20%">
+  <img class="mySlides" src="{{url_for('static', filename='ipad.png')}}" style="width:20%">
+  <img class="mySlides" src="{{url_for('static', filename='laptop.png')}}" style="width:20%">
+  <img class="mySlides" src="{{url_for('static', filename='projector.png')}}" style="width:20%">
+  <img class="mySlides" src="{{url_for('static', filename='camera.png')}}" style="width:20%">
 </section>
 
 <script>
@@ -89,7 +89,7 @@ This web application is provided to the Accountants of the CSE department at UTA
 <!-- Footer -->
 <footer class="w3-container w3-padding-30 w3-center w3-orange">
   <p class="w3-medium">
-  <img src="AMA.png" height="100" width="250"/>
+  <img src="{{url_for('static', filename='AMA.png')}}" height='100' width='250' />
   </p>
   <p>
     Developers: Pavanaj Biyani | Ethan Duff | Kevin Willians 

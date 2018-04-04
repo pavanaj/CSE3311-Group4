@@ -155,7 +155,7 @@ input[type=submit]:hover {
 <h2 align="center">New Asset Entry Form</h2>
 
 <div class="container">
-  <form action="work.html" method="POST">
+  <form action="{{ url_for('new_asset') }}" method="POST">
       <div class="row">
       <h3> <u> Asset Info </u> </h3>
     </div>
@@ -248,18 +248,18 @@ input[type=submit]:hover {
     
     <div class="row">
       <div class="col-10">
-        <label for="building">Building</label>
+        <label for="buildingCust">Building</label>
       </div>
       <div class="col-15">
-        <input type="text" id="building" name="building" placeholder="Building of Custodian">
+        <input type="text" id="buildingCust" name="buildingCust" placeholder="Building of Custodian">
       </div>
       <div class="col-10">
        </div>
       <div class="col-10">
-        <label for="room">Room</label>
+        <label for="roomCust">Room</label>
       </div>
       <div class="col-15">
-        <input type="text" id="room" name="room" placeholder="Room No of Custodian">
+        <input type="text" id="roomCust" name="roomCust" placeholder="Room No of Custodian">
       </div>
     </div>
     
@@ -300,7 +300,7 @@ input[type=submit]:hover {
         <label for="status">Status</label>
       </div>
             <div class="col-15">
-        <select id="type" name="type">
+        <select id="status" name="status">
           <option value="active">Active</option>
           <option value="stolen">Missing(Stolen)</option>
           <option value="delete">Missing(Hold for Deletion)</option>
@@ -327,7 +327,7 @@ input[type=submit]:hover {
 <!-- Footer -->
 <footer class="w3-container w3-padding-30 w3-center w3-orange">
   <p class="w3-medium">
-  <img src="AMA.png" height="100" width="250"/>
+  <img src="{{url_for('static', filename='AMA.png')}}" height='100' width='250' />
   </p>
   <p>
     Developers: Pavanaj Biyani | Ethan Duff | Kevin Willians 
