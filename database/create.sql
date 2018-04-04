@@ -35,6 +35,7 @@ CREATE TABLE Assets (
 
 CREATE TABLE Checkout (
     TagNo CHAR(6) NOT NULL,
+    SerNo VARCHAR(20),
     UTAID CHAR(10) NOT NULL,
     Name VARCHAR(20) NOT NULL,
     Email VARCHAR(30),

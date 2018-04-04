@@ -5,112 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<style>
-* {
-    box-sizing: border-box;
-}
-
-input[type=text], select, textarea{
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-}
-
-input[type=date]{
-  width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-}
-
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-}
-
-input[type=reset] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-
-.col-25 {
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-}
-
-.col-75 {
-    float: left;
-    width: 75%;
-    margin-top: 6px;
-}
-
-
-.col-50 {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-}
-
-.col-15 {
-    float: left;
-    width: 15%;
-    margin-top: 6px;
-}
-
-.col-10 {
-    float: left;
-    width: 10%;
-    margin-top: 6px;
-}
-
-.col-30 {
-    float: left;
-    width: 30%;
-    margin-top: 6px;
-}
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-    }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -120,7 +15,8 @@ input[type=submit]:hover {
   <div class="w3-dropdown-hover">
       <button class="w3-button">Assets</button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="newasset.html" class="w3-bar-item w3-button w3-hover-orange">New Asset</a>
+        <a href="newasset.html" class="w3-bar-item w3-button w3-hover-orange">New Asset(New Custodian)</a>
+        <a href="oldasset.html" class="w3-bar-item w3-button w3-hover-orange">New Asset(Old Custodian)</a>
         <a href="lookup.html" class="w3-bar-item w3-button w3-hover-orange">Lookup Asset(s)</a>
         <a href="updateasset.html" class="w3-bar-item w3-button w3-hover-orange">Update Asset</a>
       </div>
@@ -160,7 +56,7 @@ input[type=submit]:hover {
       <div class="col-10">
         <label for="tagno">Tag Number</label>
       </div>
-      <div class="col-25">
+      <div class="col-15">
         <input type="text" id="tagno" name="tagno" placeholder="Enter Tag/N if known">
       </div>
     </div>
@@ -168,7 +64,7 @@ input[type=submit]:hover {
       <div class="col-10">
         <label for="serialno">Serial Number</label>
       </div>
-      <div class="col-25">
+      <div class="col-15">
         <input type="text" id="serialno" name="serialno" placeholder="Enter S/N if known">
       </div>
     </div>
@@ -199,11 +95,28 @@ input[type=submit]:hover {
     <div class="row">
       <p>    </p>
     </div>
-      
+   
     <div class="row">
-      <div class="col-75">
-        <textarea id="description" name="description" placeholder="Tag No, Serial, Type, Description, Asset Bldg & Room, Cust Name"style="height:200px"></textarea>
-      </div>
+  <table>
+    <tr>
+      <th>Tag No</th>
+      <th>Serial No</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Building</th>
+      <th>Room</th>
+      <th>Custodian</th>
+    </tr>
+    <tr>
+      <td> ... </td>
+      <td> ... </td>
+      <td> ... </td>
+      <td> ... </td>
+      <td> ... </td>
+      <td> ... </td>      
+      <td> ... </td>
+    </tr>
+  </table>
     </div>
       
     </div>

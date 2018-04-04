@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
 <body>
-
 <!-- Navigation -->
 <nav class="w3-bar w3-indigo w3-container">
   <a href="index.html" class="w3-button w3-bar-item">Home</a>
   <div class="w3-dropdown-hover">
       <button class="w3-button">Assets</button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="newasset.html" class="w3-bar-item w3-button w3-hover-orange">New Asset</a>
+        <a href="newasset.html" class="w3-bar-item w3-button w3-hover-orange">New Asset(New Custodian)</a>
+        <a href="oldasset.html" class="w3-bar-item w3-button w3-hover-orange">New Asset(Old Custodian)</a>
         <a href="lookup.html" class="w3-bar-item w3-button w3-hover-orange">Lookup Asset(s)</a>
         <a href="updateasset.html" class="w3-bar-item w3-button w3-hover-orange">Update Asset</a>
       </div>
@@ -43,7 +44,6 @@
       </div>
   </div>
 </nav>
-
 <!-- Slide Show -->
 <section class="w3-container w3-padding-16">
   <img class="mySlides" src="{{url_for('static', filename='desktop.png')}}" style="width:20%">
@@ -82,7 +82,7 @@ function carousel()
 
 <section class="w3-container w3-content w3-center" style="max-width:700px">
 <p class="w3-center">
-This web application is provided to the Accountants of the CSE department at UTA to better manage the Assets and Custodians of the department.
+<h4> This web application is provided to the Accountants of the CSE department at UTA to better manage the Assets and Custodians of the department. </h4>
 </p>
 </section>
 
@@ -92,7 +92,7 @@ This web application is provided to the Accountants of the CSE department at UTA
   <img src="{{url_for('static', filename='AMA.png')}}" height='100' width='250' />
   </p>
   <p>
-    Developers: Pavanaj Biyani | Ethan Duff | Kevin Willians 
+    <h4> Developers: Pavanaj Biyani | Ethan Duff | Kevin Willians </h4>
   </p>
 </footer>
 
