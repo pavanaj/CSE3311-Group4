@@ -10,9 +10,18 @@ This is a repository for a Software Engineering Team Project for a Asset Managem
 * Ethan Duff
 * Kevin Williams
 
-## Current Status
-  Iteration 2
-  * Finished Tutorial 1
-  * Finalized DB, mock data ready to use
-  * Website structure is ready to use
-  * Working on python integration
+## Tools & Libraries Used
+* MySQL
+* HTML & CSS
+* Python - Flask, Jinja2
+
+## Current Status - Iteration 3
+* Finalized DB Schema
+* Mock data ready to use to test
+* Website completed
+* Application-MySQL integration completed
+  
+## Features
+* Streamline the asset management system currently in place at the UTA CSE department. 
+* The system will have the ability to access individual asset and custodian records, accounting information and off-campus checkouts. 
+* Simple and clean UI for non-technical personnel to make changes to the database.
