@@ -3,7 +3,7 @@
 </p>
 
 # CSE3311-Group4
-This is a repository for a Software Engineering Team Project for a Asset Management System
+This is a Git repository for a Software Engineering Team Project for a Web application for Asset/Inventory Management for UTA's CSE department. 
 
 ## Members
 * Pavanaj Biyani 
@@ -25,3 +25,10 @@ This is a repository for a Software Engineering Team Project for a Asset Managem
 * Streamline the asset management system currently in place at the UTA CSE department. 
 * The system will have the ability to access individual asset and custodian records, accounting information and off-campus checkouts. 
 * Simple and clean UI for non-technical personnel to make changes to the database.
+
+## How to Run
+* set FLASK_APP = "run.py"
+* flask run
+
+* Go to http://127.0.0.1:5000
+
