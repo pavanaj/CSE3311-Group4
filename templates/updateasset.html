@@ -79,11 +79,96 @@
       <div class="col-10">
         <input type="submit" value="Update">
       </div>
-      <div class="col-10">
-        <input type="reset" value="Clear">
-      </div>
       
     </div>
+            <div class="row">
+      <p>    </p>
+    </div>
+    
+        <div class="row">
+      <div class="col-10">
+        <label for="tagno">Tag Number</label>
+      </div>
+      <div class="col-15">
+        <input type="text" id="tagno" name="tagno" placeholder="Enter 6-digit T/N" maxlength="6" required> 
+      </div>
+       <div class="col-10">
+       </div>
+      <div class="col-12">
+        <label for="serialno">Serial Number</label>
+      </div>
+      <div class="col-15">
+        <input type="text" id="serialno" name="serialno" placeholder="S/N if applicable">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-10">
+        <label for="type">Type</label>
+      </div>
+      <div class="col-15">
+        <select id="type" name="type">
+          <option value="computer">Desktop</option>
+          <option value="laptop">Laptop</option>
+          <option value="camera">Camera</option>
+          <option value="scanner">Tablet/iPad</option>
+          <option value="other">Other</option>
+        </select>
+      </div>           
+       <div class="col-10">
+       </div>
+      <div class="col-12">
+        <label for="date">Acquisition Date</label>
+      </div>
+      <div class="col-15">
+      <input id="date" type="date" value="2018-01-01">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-10">
+        <label for="description">Description</label>
+      </div>
+      <div class="col-52">
+        <textarea id="description" name="description" placeholder="Write a short description about the Asset" style="height:75px"></textarea>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-10">
+        <label for="building">Building</label>
+      </div>
+      <div class="col-15">
+        <input type="text" id="building" name="building" placeholder="Building for Asset">
+      </div>
+      <div class="col-10">
+       </div>
+      <div class="col-12">
+        <label for="room">Room</label>
+      </div>
+      <div class="col-15">
+        <input type="text" id="room" name="room" placeholder="Room No for Asset">
+      </div>
+    </div>
+        <div class="row">
+         <div class="row">
+      <div class="col-10">
+        <label for="empid">Custodian ID</label>
+      </div>
+      <div class="col-15">
+        <input type="text" id="empid" name="empid" placeholder="Custodian's ID">
+      </div>
+      </div>
+      <p>  </p>
+    </div>
+
+        <div class="row">
+      <div class="col-25">
+         <input type="submit" value="Submit">
+      </div>
+      <div class="col-15">
+        <input type="reset" value="Clear">
+      </div>
+    </div>
+    
   </form>
 </div>
 
