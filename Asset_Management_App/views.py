@@ -1,10 +1,12 @@
 from flask import render_template
 from flask import request
+from flask import url_for
 from sqlalchemy import create_engine
 
 from Asset_Management_App import app
 from Asset_Management_App import db
 from Asset_Management_App import models
+from templates import *
 
 #ngine = create_engine("mysql://admin:password@localhost/AssetManagement")
 
@@ -123,17 +125,17 @@ def update_asset():
 
 @app.route('/updatecust.html', methods=['GET', 'POST'])
 def update_custodian():
-    return render_template("updatecust.html")
+    return render_template(url_for('updatecust.html'))
 
 @app.route('/viewcheck.html', methods=['GET', 'POST'])
 def view_checked_out():
-    return render_template("viewcheck.html")
+    return render_template(url_for('viewcheck.html'))
 
 @app.route('/viewcust.html', methods=['GET', 'POST'])
 def view_cust_assets():
-    return render_template("viewcust.html")
+    return render_template(url_for('viewcust.html'))
 
 @app.route('/work.html', methods=['GET', 'POST'])
 def maintenance_error():
-    return render_template("work.html")
+    return render_template(url_for('work.html'))
 
