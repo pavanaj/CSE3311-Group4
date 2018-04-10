@@ -1,4 +1,4 @@
-from flask import render_template, request, url_for, flash, redirect
+from flask import render_template, request
 
 from Asset_Management_App import app, db, models
 
@@ -12,11 +12,22 @@ def index():
 #Route for page to view accounting information
 @app.route('/acct.html', methods=['GET','POST'])
 def view_accounting():
+    if request.method == 'POST':
+        
     return render_template("acct.html") #Template to use for viewing account information
 
 #Route for page for custodian lookup
 @app.route('/allcust.html', methods=['GET','POST'])
 def custodian_lookup():
+    if request.method == 'POST':
+        custID = request.form.get('empid', None)
+        custName = request.form.get('name', None)
+        queryVal = models.Custodian.query.filter((models.Custodian.empID == custID) | (models.Custodian.custName ==
+        custName)).first()
+        result = {'empID': queryVal.empID, 'name': queryVal.custName, 'email': queryVal.email,
+                  'build': queryVal.building, 'room': queryVal.room
+        }
+        return render_template("allcust.html", **result)
     return render_template("allcust.html") #Template for use viewing custodian information
 
 #Route for page for checking in a checked out asset
@@ -56,13 +67,14 @@ def asset_lookup():
         tag = request.form.get("tagno", None)   #Gets tag number for asset to lookup
         serial = request.form.get("serialno", None) #Gets serial number for asset to lookup
         #Assigns tuple found in query to a variable
-        queryVal = models.Assets.query.filter((models.Assets.tagNo == tag) | (models.Assets.serialNo == serial)).first()
-        asset = models.Assets(queryVal) #Converting query result to an Asset object
-        result = {'tag': asset.tagNo, 'serial': asset.serialNo, 'cat': asset.type, 'desc': asset.description,
-                  'cust': asset.custID, 'acq': asset.acqDate, 'build': asset.bldg, 'room': asset.room,
-                  'stat': asset.status
+        queryVal = models.Assets.query.filter((models.Assets.tagNo == tag) | (models.Assets.serialNo == serial)).\
+            first()
+        result = {'tag': queryVal.tagNo, 'serial': queryVal.serialNo, 'cat': queryVal.type, 'desc': queryVal.description,
+                  'cust': queryVal.custID, 'acq': queryVal.acqDate, 'build': queryVal.bldg, 'room': queryVal.room,
+                  'stat': queryVal.status
         }   #Creating structure to pass back to html form
-    return render_template("lookup.html", result)   #Returning to template with input
+        return render_template("lookup.html", **result)
+    return render_template("lookup.html")   #Returning to template with input
 
 #Route for new asset page
 @app.route('/newasset.html', methods=['GET', 'POST'])
@@ -143,15 +155,18 @@ def update_custodian():
 #Route for viewing checkout information
 @app.route('/viewcheck.html', methods=['GET', 'POST'])
 def view_checked_out():
-    return render_template(url_for('viewcheck.html'))   #Template for viewing checkout information
+    return render_template("viewcheck.html")   #Template for viewing checkout information
 
 #Route for viewing custodian info
 @app.route('/viewcust.html', methods=['GET', 'POST'])
 def view_cust_assets():
-    return render_template(url_for('viewcust.html'))    #Template for viewing custodian info
+    if(request.method == 'POST'):
+        custID = request.form.get('empid', None)
+        custName = request.form.get('name', None)
+    return render_template("viewcust.html")    #Template for viewing custodian info
 
 #Route for WIP page
 @app.route('/work.html', methods=['GET', 'POST'])
 def maintenance_error():
-    return render_template(url_for('work.html'))    #Template for WIP page
+    return render_template("work.html")    #Template for WIP page
 

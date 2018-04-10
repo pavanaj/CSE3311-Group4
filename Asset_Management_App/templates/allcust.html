@@ -51,7 +51,7 @@
 <h2 align="center">View Custodian(s)</h2>
 
 <div class="container">
-  <form action="/action_page.php" method = "POST">
+  <form action="{{ url_for('custodian_lookup') }}" method = "POST">
     <div class="row">
       <div class="col-10">
         <label for="empid">Custodian ID</label>
@@ -103,11 +103,11 @@
       <th>Email</th>
     </tr>
     <tr>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
+      <td> {{empID}} </td>
+      <td> {{name}} </td>
+      <td> {{build}} </td>
+      <td> {{room}} </td>
+      <td> {{email}} </td>
     </tr>
   </table></div>
     </div>
