@@ -48,10 +48,10 @@
   </div>
 </nav>
 
-<h2 align="center">Lookup Asset(s) Form</h2>
+<h2 align="center">View Accounting Info</h2>
 
 <div class="container">
-  <form action="{{ url_for('asset_lookup') }}" method ="POST">
+  <form action="{{ url_for('view_accounting') }}" method = "POST">
     <div class="row">
       <div class="col-10">
         <label for="tagno">Tag Number</label>
@@ -77,7 +77,7 @@
     </div>
     <div class="row">
       <div class="col-10">
-        <input type="submit" value="Look Up">
+        <input type="submit" value="View">
       </div>
       <div class="col-10">
         <input type="submit" value="View All">
@@ -92,8 +92,9 @@
     <div class="row">
       <p>    </p>
     </div>
-   
+      
     <div class="row">
+      <div class="row">
   <table>
     <tr>
       <th>Tag No</th>
@@ -102,18 +103,24 @@
       <th>Description</th>
       <th>Building</th>
       <th>Room</th>
+	 <th>Status</th>
+	<th>Cost</th>
       <th>Custodian</th>
     </tr>
     <tr>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>      
-      <td> ... </td>
+      <td> {{tag}} </td>
+      <td> {{serialNo}} </td>
+      <td> {{cat}} </td>
+      <td> {{desc}} </td>
+      <td> {{build}} </td>
+      <td> {{room}} </td>
+      <td> {{stat}} </td>
+	 <td> {{cost}} </td>
+    	 <td> {{cust}} </td>
     </tr>
   </table>
+    </div>
+
     </div>
       
     </div>

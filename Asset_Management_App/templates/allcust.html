@@ -48,36 +48,34 @@
   </div>
 </nav>
 
-<h2 align="center">View Accounting Info</h2>
+<h2 align="center">View Custodian(s)</h2>
 
 <div class="container">
-  <form action="work.html" method = "POST">
+  <form action="{{ url_for('custodian_lookup') }}" method = "POST">
     <div class="row">
       <div class="col-10">
-        <label for="tagno">Tag Number</label>
+        <label for="empid">Custodian ID</label>
       </div>
       <div class="col-15">
-        <input type="text" id="tagno" name="tagno" placeholder="Enter Tag/N if known" maxlength="6">
+        <input type="text" id="empid" name="empid" placeholder="Enter Custodian ID" maxlength="10">
       </div>
     </div>
-    <div class="row-25">
+    <div class="row">
       <div class="col-10">
-        <label for="serialno">Serial Number</label>
+        <label for="name">Custodian Name</label>
       </div>
       <div class="col-15">
-        <input type="text" id="serialno" name="serialno" placeholder="Enter S/N if known">
+        <input type="text" id="name" name="name" placeholder="Enter Custodian's Name">
       </div>
     </div>
     
     <div class="row">
       <p>    </p>
     </div>
-        <div class="row">
-      <p>    </p>
-    </div>
+
     <div class="row">
       <div class="col-10">
-        <input type="submit" value="View">
+        <input type="submit" value="Look Up">
       </div>
       <div class="col-10">
         <input type="submit" value="View All">
@@ -93,35 +91,27 @@
       <p>    </p>
     </div>
       
+    
     <div class="row">
-      <div class="row">
-  <table>
+      <div class="col-75">
+         <table>
     <tr>
-      <th>Tag No</th>
-      <th>Serial No</th>
-      <th>Type</th>
-      <th>Description</th>
+      <th>Custodian ID</th>
+      <th>Custodian Name</th>
       <th>Building</th>
       <th>Room</th>
-	 <th>Status</th>
-	<th>Cost</th>
-      <th>Custodian</th>
+      <th>Email</th>
     </tr>
     <tr>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>      
-      <td> ... </td>
-	 <td> ... </td>
-    	 <td> ... </td>
+      <td> {{empID}} </td>
+      <td> {{name}} </td>
+      <td> {{build}} </td>
+      <td> {{room}} </td>
+      <td> {{email}} </td>
     </tr>
-  </table>
+  </table></div>
     </div>
 
-    </div>
       
     </div>
   </form>
