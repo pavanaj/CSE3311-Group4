@@ -29,13 +29,14 @@ def view_accounting():
 @app.route('/allcust.html', methods=['GET','POST'])
 def custodian_lookup():
     if request.method == 'POST':
-        custID = request.form.get('empid', None)
-        custName = request.form.get('name', None)
-        queryVal = models.Custodian.query.filter((models.Custodian.empID == custID) | (models.Custodian.custName ==
-        custName)).first()
-        result = {'empID': queryVal.empID, 'name': queryVal.custName, 'email': queryVal.email,
-                  'build': queryVal.building, 'room': queryVal.room
-        }
+        if request.form.post['Action']:
+            custID = request.form.get('empid', None)
+            custName = request.form.get('name', None)
+            queryVal = models.Custodian.query.filter((models.Custodian.empID == custID) | (models.Custodian.custName ==
+            custName)).first()
+            result = {'empID': queryVal.empID, 'name': queryVal.custName, 'email': queryVal.email,
+                    'build': queryVal.building, 'room': queryVal.room
+            }
         return render_template("allcust.html", **result)
     return render_template("allcust.html") #Template for use viewing custodian information
 
@@ -73,16 +74,20 @@ def asset_checkout():
 @app.route('/lookup.html', methods=['GET', 'POST'])
 def asset_lookup():
     if request.method == 'POST':                #Checks for method from template
-        tag = request.form.get("tagno", None)   #Gets tag number for asset to lookup
-        serial = request.form.get("serialno", None) #Gets serial number for asset to lookup
-        #Assigns tuple found in query to a variable
-        queryVal = models.Assets.query.filter((models.Assets.tagNo == tag) | (models.Assets.serialNo == serial)).\
+        if request.form['Action'] == "Look Up":
+            tag = request.form.get("tagno", None)   #Gets tag number for asset to lookup
+            serial = request.form.get("serialno", None) #Gets serial number for asset to lookup
+            #Assigns tuple found in query to a variable
+            queryVal = models.Assets.query.filter((models.Assets.tagNo == tag) | (models.Assets.serialNo == serial)).\
             first()
-        result = {'tag': queryVal.tagNo, 'serial': queryVal.serialNo, 'cat': queryVal.type, 'desc': queryVal.description,
-                  'cust': queryVal.custID, 'acq': queryVal.acqDate, 'build': queryVal.bldg, 'room': queryVal.room,
-                  'stat': queryVal.status
-        }   #Creating structure to pass back to html form
-        return render_template("lookup.html", **result)
+            result = {'tag': queryVal.tagNo, 'serial': queryVal.serialNo, 'cat': queryVal.type, 'desc': queryVal.description,
+                    'cust': queryVal.custID, 'acq': queryVal.acqDate, 'build': queryVal.bldg, 'room': queryVal.room,
+                    'stat': queryVal.status
+            }   #Creating structure to pass back to html form
+            return render_template("lookup.html", **result)
+        #if request.form['Action'] == "View All":
+
+
     return render_template("lookup.html")   #Returning to template with input
 
 #Route for new asset page
