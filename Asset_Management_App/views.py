@@ -13,7 +13,16 @@ def index():
 @app.route('/acct.html', methods=['GET','POST'])
 def view_accounting():
     if request.method == 'POST':
-        
+        tagNo = request.form.get('tagno', None)
+        serial = request.form.get('serialno', None)
+        queryVal = models.Accounts.query.filter((models.Accounts.tagNo == tagNo)).first()
+        queryVal2 = models.Assets.query.filter((models.Assets.tagNo == tagNo) | (models.Assets.serialNo == serial)). \
+            first()
+        result = {'tag': queryVal.tagNo, 'cost': queryVal.cost, 'serialNo': queryVal2.serialNo, 'cat': queryVal2.type,
+                  'desc': queryVal2.description, 'build': queryVal2.bldg, 'room': queryVal2.room,
+                  'stat': queryVal2.status, 'cust': queryVal2.custID
+        }
+        return render_template("acct.html", **result)
     return render_template("acct.html") #Template to use for viewing account information
 
 #Route for page for custodian lookup

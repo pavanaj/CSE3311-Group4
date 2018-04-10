@@ -51,7 +51,7 @@
 <h2 align="center">View Accounting Info</h2>
 
 <div class="container">
-  <form action="work.html" method = "POST">
+  <form action="{{ url_for('view_accounting') }}" method = "POST">
     <div class="row">
       <div class="col-10">
         <label for="tagno">Tag Number</label>
@@ -108,15 +108,15 @@
       <th>Custodian</th>
     </tr>
     <tr>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>      
-      <td> ... </td>
-	 <td> ... </td>
-    	 <td> ... </td>
+      <td> {{tag}} </td>
+      <td> {{serialNo}} </td>
+      <td> {{cat}} </td>
+      <td> {{desc}} </td>
+      <td> {{build}} </td>
+      <td> {{room}} </td>
+      <td> {{stat}} </td>
+	 <td> {{cost}} </td>
+    	 <td> {{cust}} </td>
     </tr>
   </table>
     </div>
