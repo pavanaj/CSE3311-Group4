@@ -1,14 +1,6 @@
-from flask import render_template
-from flask import request
-from flask import url_for
-from sqlalchemy import create_engine
+from flask import render_template, request, url_for, flash, redirect
 
-from Asset_Management_App import app
-from Asset_Management_App import db
-from Asset_Management_App import models
-from templates import *
-
-#ngine = create_engine("mysql://admin:password@localhost/AssetManagement")
+from Asset_Management_App import app, db, models
 
 @app.route('/')
 @app.route('/index.html')
@@ -33,6 +25,7 @@ def asset_checkin():
         db.session.query().filter(models.Checkout.tagNo == tagNo or models.Checkout.serialNo == serialNo).\
         update({"checkin": checkIn})
         db.session.commit
+        flash('Succesfully checked in asset')
     return render_template("checkin.html")
 
 @app.route('/checkout.html', methods=['GET','POST'])
@@ -49,6 +42,7 @@ def asset_checkout():
         db.session.add(newCheckout)
         db.session.commit()
 
+        flash('Asset succesfully checked out')
     return render_template("checkout.html")
 
 @app.route('/lookup.html', methods=['GET', 'POST'])
@@ -58,7 +52,6 @@ def asset_lookup():
         serial = request.form.get("serialno", None)
         queryVal = models.Assets.query.filter((models.Assets.tagNo == tag) | (models.Assets.serialNo == serial)).first()
         print(queryVal)
-
     return render_template("lookup.html")
 
 @app.route('/newasset.html', methods=['GET', 'POST'])
@@ -125,7 +118,7 @@ def update_asset():
 
 @app.route('/updatecust.html', methods=['GET', 'POST'])
 def update_custodian():
-    return render_template(url_for('updatecust.html'))
+    return render_template("updatecust.html")
 
 @app.route('/viewcheck.html', methods=['GET', 'POST'])
 def view_checked_out():

@@ -2,10 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f240d0c7-1b31-4b02-a707-b02f3a4be174" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CSE3311-Group4.iml" afterPath="$PROJECT_DIR$/.idea/CSE3311-Group4.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/__init__.py" afterPath="$PROJECT_DIR$/Asset_Management_App/__init__.py" />
       <change beforePath="$PROJECT_DIR$/Asset_Management_App/views.py" afterPath="$PROJECT_DIR$/Asset_Management_App/views.py" />
+      <change beforePath="$PROJECT_DIR$/static/AMA.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/camera.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/desktop.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/ipad.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/laptop.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static/projector.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/templates/acct.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" />
+      <change beforePath="$PROJECT_DIR$/templates/allcust.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" />
+      <change beforePath="$PROJECT_DIR$/templates/checkin.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/checkin.html" />
+      <change beforePath="$PROJECT_DIR$/templates/checkout.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/checkout.html" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/index.html" />
+      <change beforePath="$PROJECT_DIR$/templates/lookup.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" />
+      <change beforePath="$PROJECT_DIR$/templates/newasset.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/newasset.html" />
+      <change beforePath="$PROJECT_DIR$/templates/newcust.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/newcust.html" />
+      <change beforePath="$PROJECT_DIR$/templates/oldasset.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/oldasset.html" />
+      <change beforePath="$PROJECT_DIR$/templates/report.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/report.html" />
+      <change beforePath="$PROJECT_DIR$/templates/style.css" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/style.css" />
+      <change beforePath="$PROJECT_DIR$/templates/updateacct.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/updateacct.html" />
+      <change beforePath="$PROJECT_DIR$/templates/updateasset.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/updateasset.html" />
+      <change beforePath="$PROJECT_DIR$/templates/updatecust.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html" />
+      <change beforePath="$PROJECT_DIR$/templates/viewcheck.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html" />
+      <change beforePath="$PROJECT_DIR$/templates/viewcust.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html" />
+      <change beforePath="$PROJECT_DIR$/templates/work.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/work.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,8 +53,8 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Asset_Management_App/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
               <folding>
                 <element signature="e#35#58#0" expanded="true" />
               </folding>
@@ -43,10 +65,10 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Asset_Management_App/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="127" column="36" lean-forward="true" selection-start-line="127" selection-start-column="36" selection-end-line="127" selection-end-column="36" />
+            <state relative-caret-position="413">
+              <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
               <folding>
-                <element signature="e#0#33#0" expanded="true" />
+                <element signature="e#0#68#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,6 +84,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="acct.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -71,6 +103,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Asset_Management_App/views.py" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/__init__.py" />
       </list>
     </option>
   </component>
@@ -108,6 +141,18 @@
               <item name="CSE3311-Group4" type="462c0819:PsiDirectoryNode" />
               <item name="Asset_Management_App" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CSE3311-Group4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CSE3311-Group4" type="462c0819:PsiDirectoryNode" />
+              <item name="Asset_Management_App" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CSE3311-Group4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CSE3311-Group4" type="462c0819:PsiDirectoryNode" />
+              <item name="Asset_Management_App" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -118,6 +163,12 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kevin\Documents\GitHub\CSE3311-Group4\Asset_Management_App" />
+      <recent name="C:\Users\Kevin\Documents\GitHub\CSE3311-Group4" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -178,22 +229,20 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
             <element signature="e#9#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#35#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -206,12 +255,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding>
+            <element signature="e#35#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Asset_Management_App/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="127" column="36" lean-forward="true" selection-start-line="127" selection-start-column="36" selection-end-line="127" selection-end-column="36" />
+        <state relative-caret-position="413">
+          <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
-            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#0#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
