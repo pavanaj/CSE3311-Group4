@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f240d0c7-1b31-4b02-a707-b02f3a4be174" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Asset_Management_App/__init__.py" afterPath="$PROJECT_DIR$/Asset_Management_App/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/models.py" afterPath="$PROJECT_DIR$/Asset_Management_App/models.py" />
       <change beforePath="$PROJECT_DIR$/Asset_Management_App/views.py" afterPath="$PROJECT_DIR$/Asset_Management_App/views.py" />
-      <change beforePath="$PROJECT_DIR$/static/AMA.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/camera.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/desktop.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/ipad.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/laptop.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/projector.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/acct.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" />
-      <change beforePath="$PROJECT_DIR$/templates/allcust.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" />
-      <change beforePath="$PROJECT_DIR$/templates/checkin.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/checkin.html" />
-      <change beforePath="$PROJECT_DIR$/templates/checkout.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/checkout.html" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/index.html" />
-      <change beforePath="$PROJECT_DIR$/templates/lookup.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" />
-      <change beforePath="$PROJECT_DIR$/templates/newasset.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/newasset.html" />
-      <change beforePath="$PROJECT_DIR$/templates/newcust.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/newcust.html" />
-      <change beforePath="$PROJECT_DIR$/templates/oldasset.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/oldasset.html" />
-      <change beforePath="$PROJECT_DIR$/templates/report.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/report.html" />
-      <change beforePath="$PROJECT_DIR$/templates/style.css" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/style.css" />
-      <change beforePath="$PROJECT_DIR$/templates/updateacct.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/updateacct.html" />
-      <change beforePath="$PROJECT_DIR$/templates/updateasset.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/updateasset.html" />
-      <change beforePath="$PROJECT_DIR$/templates/updatecust.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html" />
-      <change beforePath="$PROJECT_DIR$/templates/viewcheck.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html" />
-      <change beforePath="$PROJECT_DIR$/templates/viewcust.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html" />
-      <change beforePath="$PROJECT_DIR$/templates/work.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/work.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,7 +18,7 @@
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
                 <element signature="e#9#45#0" expanded="true" />
               </folding>
@@ -65,8 +41,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Asset_Management_App/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+            <state relative-caret-position="549">
+              <caret line="155" column="74" lean-forward="false" selection-start-line="155" selection-start-column="74" selection-end-line="155" selection-end-column="74" />
               <folding>
                 <element signature="e#0#68#0" expanded="true" />
               </folding>
@@ -78,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/Asset_Management_App/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -88,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,12 +78,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Asset_Management_App/views.py" />
         <option value="$PROJECT_DIR$/Asset_Management_App/__init__.py" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/models.py" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="17" />
     <option name="y" value="47" />
     <option name="width" value="1346" />
@@ -199,7 +176,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -232,7 +209,7 @@
     <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -240,18 +217,10 @@
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
             <element signature="e#9#45#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -265,10 +234,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Asset_Management_App/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+        <state relative-caret-position="549">
+          <caret line="155" column="74" lean-forward="false" selection-start-line="155" selection-start-column="74" selection-end-line="155" selection-end-column="74" />
           <folding>
             <element signature="e#0#68#0" expanded="true" />
           </folding>

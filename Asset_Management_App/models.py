@@ -47,6 +47,7 @@ class Assets(db.Model):
 class Checkout(db.Model):
         __tablename__='Checkout'
         tagNo = db.Column("TagNo",  db.String(6), unique=False, nullable=False)
+        serNo = db.Column("SerNo", db.String(20), unique=False, nullable=True)
         UTAID = db.Column("UTAID", db.String(10), unique=False, nullable=False, primary_key=True)
         name = db.Column("Name", db.String(20), unique=False, nullable=False)
         email = db.Column("Email", db.String(30), unique=False, nullable=True)
@@ -58,8 +59,9 @@ class Checkout(db.Model):
         def __repr__(self):
             return 'Checkout: %s' % self.UTAID
 
-        def __init__(self, tagNo, UTAID, name, email, checkout, returnDate, checkin):
+        def __init__(self, tagNo, serNo, UTAID, name, email, checkout, returnDate, checkin):
             self.tagNo = tagNo
+            self.serNo = serNo
             self.UTAID = UTAID
             self.name = name
             self.email = email

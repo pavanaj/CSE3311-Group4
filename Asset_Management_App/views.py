@@ -2,133 +2,156 @@ from flask import render_template, request, url_for, flash, redirect
 
 from Asset_Management_App import app, db, models
 
+
+#Routes for base page of web app
 @app.route('/')
 @app.route('/index.html')
 def index():
-    return render_template("index.html")
+    return render_template("index.html") #Template to use for base page
 
+#Route for page to view accounting information
 @app.route('/acct.html', methods=['GET','POST'])
 def view_accounting():
-    return render_template("acct.html")
+    return render_template("acct.html") #Template to use for viewing account information
 
+#Route for page for custodian lookup
 @app.route('/allcust.html', methods=['GET','POST'])
 def custodian_lookup():
-    return render_template("allcust.html")
+    return render_template("allcust.html") #Template for use viewing custodian information
 
+#Route for page for checking in a checked out asset
 @app.route('/checkin.html', methods=['GET','POST'])
 def asset_checkin():
-    if request.method == 'POST':
-        tagNo = request.form.get("tagno", False)
-        serialNo = request.form.get("serialno", False)
-        checkIn = request.form.get("date", False)
+    if request.method == 'POST':                    #Checks for method from template
+        tagNo = request.form.get("tagno", False)    #Gets tag number for asset if exists
+        serialNo = request.form.get("serialno", False)  #Gets serial number for asset if exists
+        checkIn = request.form.get("date", False)       #Gets check in date from form
 
         db.session.query().filter(models.Checkout.tagNo == tagNo or models.Checkout.serialNo == serialNo).\
-        update({"checkin": checkIn})
-        db.session.commit
-        flash('Succesfully checked in asset')
-    return render_template("checkin.html")
+        update({"checkin": checkIn}) #Find tuple with tag number of serial number of asset being checked in and updates
+        db.session.commit            #Commit transaction to database
+    return render_template("checkin.html")  #Template for checking in an asset
 
+#Route for page to check out an asset
 @app.route('/checkout.html', methods=['GET','POST'])
 def asset_checkout():
-    if request.method == 'POST':
-        tagNo = request.form.get("tagno", False)
-        empID = request.form.get("empid", False)
-        memName = request.form.get("name", False)
-        email = request.form.get("email", False)
-        outDate = request.form.get("outdate", False)
-        inDate = request.form.get("indate", False)
+    if request.method == 'POST':    #Checks for method from template
+        tagNo = request.form.get("tagno", False)    #Gets tag number for asset if it exists
+        empID = request.form.get("empid", False)    #Gets UTAID for person checking out asset
+        memName = request.form.get("name", False)   #Gets name of person checking out asset
+        email = request.form.get("email", False)    #Gets email of person checking out asset
+        outDate = request.form.get("outdate", False)    #Gets checkout date for asset
+        inDate = request.form.get("indate", False)      #Gets checkin date for asset
 
-        newCheckout = models.Checkout(tagNo, empID, memName, email, outDate, inDate, None)
-        db.session.add(newCheckout)
-        db.session.commit()
+        newCheckout = models.Checkout(tagNo, empID, memName, email, outDate, inDate, None) #Creates new checkout tuple
+        db.session.add(newCheckout)     #Adds new tuple to database
+        db.session.commit()             #Commits changes to database
 
-        flash('Asset succesfully checked out')
-    return render_template("checkout.html")
+    return render_template("checkout.html") #Template for checking out an asset
 
+#Route for asset lookup page
 @app.route('/lookup.html', methods=['GET', 'POST'])
 def asset_lookup():
-    if request.method == 'POST':
-        tag = request.form.get("tagno", None)
-        serial = request.form.get("serialno", None)
+    if request.method == 'POST':                #Checks for method from template
+        tag = request.form.get("tagno", None)   #Gets tag number for asset to lookup
+        serial = request.form.get("serialno", None) #Gets serial number for asset to lookup
+        #Assigns tuple found in query to a variable
         queryVal = models.Assets.query.filter((models.Assets.tagNo == tag) | (models.Assets.serialNo == serial)).first()
-        print(queryVal)
-    return render_template("lookup.html")
+        asset = models.Assets(queryVal) #Converting query result to an Asset object
+        result = {'tag': asset.tagNo, 'serial': asset.serialNo, 'cat': asset.type, 'desc': asset.description,
+                  'cust': asset.custID, 'acq': asset.acqDate, 'build': asset.bldg, 'room': asset.room,
+                  'stat': asset.status
+        }   #Creating structure to pass back to html form
+    return render_template("lookup.html", result)   #Returning to template with input
 
+#Route for new asset page
 @app.route('/newasset.html', methods=['GET', 'POST'])
 def new_asset():
-    if request.method == 'POST':
-        tagNo = request.form.get("tagno", False)
-        serialNo = request.form.get("serialno", False)
-        type = request.form.get("type", False)
-        date = request.form.get("date", False)
-        description = request.form.get("description", False)
-        building = request.form.get("building", False)
-        room = request.form.get("room", False)
+    if request.method == 'POST': #Checks for method from template
+        tagNo = request.form.get("tagno", False)    #Gets tag number for new asset
+        serialNo = request.form.get("serialno", False)  #Gets serial number for new asset
+        type = request.form.get("type", False)          #Gets asset type for new asset
+        date = request.form.get("date", False)          #Gets acquisition date for new asset
+        description = request.form.get("description", False)    #Gets description of new asset
+        building = request.form.get("building", False)          #Gets building for new asset
+        room = request.form.get("room", False)                  #Gets room for new asset
 
-        empID = request.form.get("empid", False)
-        name = request.form.get("name", False)
-        buildingCust = request.form.get("buildingCust", False)
-        roomCust = request.form.get("roomCust", False)
-        email = request.form.get("email", False)
+        empID = request.form.get("empid", False)                #Gets ID for new custodian using new asset
+        name = request.form.get("name", False)                  #Gets name for new custodian using new asset
+        buildingCust = request.form.get("buildingCust", False)  #Gets building name for new custodian using new asset
+        roomCust = request.form.get("roomCust", False)  #Gets room number for new custodian using new asset
+        email = request.form.get("email", False)        #Gets email for new custodian using new asset
 
-        cost = request.form.get("cost", False)
-        funds = request.form.get("funds", False)
-        status = request.form.get("status", False)
-        reportNum = None
+        cost = request.form.get("cost", False)          #Gets cost for new accounting entry for new asset
+        funds = request.form.get("funds", False)        #Gets funds for new accounting entry for new asset
+        status = request.form.get("status", False)      #Gets status for new accounting entry for new asset
+        reportNum = None                                #Sets report value to null, by default no police reports
 
+        #Creates object for new asset
         newAsset = models.Assets(tagNo = tagNo, serialNo = serialNo, description = description, type = type, custID = empID,
         acqDate = date, bldg = building, room = room, status = status)
+        #Creates object for new custodian
         newCust = models.Custodian(empID = empID, custName = name, email = email, building = buildingCust, room = roomCust)
+        #Creates object for new accounting entry
         newAccount = models.Accounts(tagNo = tagNo, cost = cost, fundSource = funds, reportNum = reportNum, reportDate = None)
 
-        db.session.add(newAsset)
-        db.session.add(newAccount)
+
+        db.session.add(newAsset)    #Add new asset
+        db.session.add(newAccount)  #Add new accounting entry
         if((email != False) and (name != False) and (buildingCust != False) and (roomCust != False)):
-            db.session.add(newCust)
-        db.session.commit()
+            db.session.add(newCust) #Add new custodian if user did not leave any necessary fields blank
+        db.session.commit()         #Commit new transactions
 
-    return render_template("newasset.html")
+    return render_template("newasset.html")     #Template for new asset creation
 
+#Route for new custodian creation
 @app.route('/newcust.html', methods=['GET', 'POST'])
 def new_custodian():
-    if(request.method == 'POST'):
-        custid = request.form['empid']
-        name = request.form['name']
-        buildingcust = request.form['building']
-        roomcust = request.form['room']
-        custmail = request.form['email']
+    if(request.method == 'POST'):   #Checks form for method
+        custid = request.form['empid']  #Gets ID for new custodian
+        name = request.form['name']     #Gets name for new custodian
+        buildingcust = request.form['building'] #Gets building for new custodian
+        roomcust = request.form['room']         #Gets room number for new custodian
+        custmail = request.form['email']        #Gets email for new custodian
 
-        newCust = models.Custodian(custid, name, custmail, buildingcust, roomcust)
-        db.session.add(newCust)
-        db.session.commit()
+        newCust = models.Custodian(custid, name, custmail, buildingcust, roomcust)  #Creates object for new custodian
+        db.session.add(newCust) #Adds new custodian to database
+        db.session.commit()     #Commit changes
 
-    return render_template("newcust.html")
+    return render_template("newcust.html")  #Template for new custodian creation
 
+#Route for police report recording
 @app.route('/report.html', methods=['GET', 'POST'])
 def asset_report():
-    return render_template("report.html")
+    return render_template("report.html")   #Template for filing new report
 
+#Route for updating accounting info
 @app.route('/updateacct.html', methods=['GET', 'POST'])
 def update_accounting():
-    return render_template("updateacct.html")
+    return render_template("updateacct.html")   #Template for updating accounting info
 
+#Route for updating asset info
 @app.route('/updateasset.html', methods=['GET', 'POST'])
 def update_asset():
-    return render_template("updateasset.html")
+    return render_template("updateasset.html")  #Template for updating asset info
 
+#Route for updating custodian info
 @app.route('/updatecust.html', methods=['GET', 'POST'])
 def update_custodian():
-    return render_template("updatecust.html")
+    return render_template("updatecust.html")   #Template for updating custodian info
 
+#Route for viewing checkout information
 @app.route('/viewcheck.html', methods=['GET', 'POST'])
 def view_checked_out():
-    return render_template(url_for('viewcheck.html'))
+    return render_template(url_for('viewcheck.html'))   #Template for viewing checkout information
 
+#Route for viewing custodian info
 @app.route('/viewcust.html', methods=['GET', 'POST'])
 def view_cust_assets():
-    return render_template(url_for('viewcust.html'))
+    return render_template(url_for('viewcust.html'))    #Template for viewing custodian info
 
+#Route for WIP page
 @app.route('/work.html', methods=['GET', 'POST'])
 def maintenance_error():
-    return render_template(url_for('work.html'))
+    return render_template(url_for('work.html'))    #Template for WIP page
 
