@@ -54,19 +54,22 @@
   <form action="work.html">
     <div class="row">
       <div class="col-10">
-        <label for="tagno">Tag Number</label>
+        <label for="oldtagno">Tag Number</label>
       </div>
       <div class="col-15">
-        <input type="text" id="tagno" name="tagno" placeholder="Enter Tag/N if known">
+        <input type="text" id="oldtagno" name="oldtagno" placeholder="Enter Tag/N if known">
+      </div>
+      <div class="col-10">
+       </div>
+      <div class="col-12">
+        <label for="oldserialno">Serial Number</label>
+      </div>
+      <div class="col-15">
+        <input type="text" id="oldserialno" name="oldserialno" placeholder="Enter S/N if known">
       </div>
     </div>
     <div class="row-25">
-      <div class="col-10">
-        <label for="serialno">Serial Number</label>
-      </div>
-      <div class="col-15">
-        <input type="text" id="serialno" name="serialno" placeholder="Enter S/N if known">
-      </div>
+
     </div>
     
     <div class="row">
@@ -76,29 +79,35 @@
       <p>    </p>
     </div>
     <div class="row">
+    <div class="col-24">
+       </div>
       <div class="col-10">
         <input type="submit" value="Update">
       </div>
       
     </div>
+            
             <div class="row">
-      <p>    </p>
+      <p>  </p>
+    </div>
+    <div class="row">
+        <h3> <u> Update Asset Details Below </u> </h3>
     </div>
     
         <div class="row">
       <div class="col-10">
-        <label for="tagno">Tag Number</label>
+        <label for="newtagno">Tag Number</label>
       </div>
       <div class="col-15">
-        <input type="text" id="tagno" name="tagno" placeholder="Enter 6-digit T/N" maxlength="6" minlength="6"> 
+        <input type="text" id="newtagno" name="newtagno" maxlength="6" minlength="6"> 
       </div>
        <div class="col-10">
        </div>
       <div class="col-12">
-        <label for="serialno">Serial Number</label>
+        <label for="newserialno">Serial Number</label>
       </div>
       <div class="col-15">
-        <input type="text" id="serialno" name="serialno" placeholder="S/N if applicable">
+        <input type="text" id="newserialno" name="newserialno">
       </div>
     </div>
     <div class="row">
@@ -107,7 +116,7 @@
       </div>
       <div class="col-15">
         <select id="type" name="type">
-          <option value="computer">Desktop</option>
+          <option value="desktop">Desktop</option>
           <option value="laptop">Laptop</option>
           <option value="camera">Camera</option>
           <option value="scanner">Tablet/iPad</option>
@@ -120,7 +129,7 @@
         <label for="date">Acquisition Date</label>
       </div>
       <div class="col-15">
-      <input id="date" type="date" value="2018-01-01">
+      <input id="date" type="date">
       </div>
     </div>
     <div class="row">
@@ -128,7 +137,7 @@
         <label for="description">Description</label>
       </div>
       <div class="col-52">
-        <textarea id="description" name="description" placeholder="Write a short description about the Asset" style="height:75px"></textarea>
+        <textarea id="description" name="description" style="height:75px"></textarea>
       </div>
     </div>
     
@@ -137,7 +146,7 @@
         <label for="building">Building</label>
       </div>
       <div class="col-15">
-        <input type="text" id="building" name="building" placeholder="Building for Asset">
+        <input type="text" id="building" name="building">
       </div>
       <div class="col-10">
        </div>
@@ -145,7 +154,7 @@
         <label for="room">Room</label>
       </div>
       <div class="col-15">
-        <input type="text" id="room" name="room" placeholder="Room No for Asset">
+        <input type="text" id="room" name="room">
       </div>
     </div>
         <div class="row">
@@ -154,7 +163,7 @@
         <label for="empid">Custodian ID</label>
       </div>
       <div class="col-15">
-        <input type="text" id="empid" name="empid" placeholder="Custodian's ID" maxlength="10">
+        <input type="text" id="empid" name="empid" minlegth="10" maxlength="10">
       </div>
       </div>
       <p>  </p>

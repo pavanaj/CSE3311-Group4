@@ -70,7 +70,6 @@ input[type=submit]:hover {
     margin-top: 6px;
 }
 
-
 .col-52 {
     float: left;
     width: 52%;
@@ -98,6 +97,12 @@ input[type=submit]:hover {
 .col-30 {
     float: left;
     width: 30%;
+    margin-top: 6px;
+}
+
+.col-32 {
+    float: left;
+    width: 32%;
     margin-top: 6px;
 }
 /* Clear floats after the columns */
