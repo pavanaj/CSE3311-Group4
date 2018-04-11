@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f240d0c7-1b31-4b02-a707-b02f3a4be174" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/newasset.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/newasset.html" />
       <change beforePath="$PROJECT_DIR$/Asset_Management_App/views.py" afterPath="$PROJECT_DIR$/Asset_Management_App/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Asset_Management_App/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1479">
-              <caret line="87" column="9" lean-forward="false" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+            <state relative-caret-position="1572">
+              <caret line="150" column="19" lean-forward="true" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="19" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -51,17 +51,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="acct.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
+      <file leaf-file-name="newasset.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/newasset.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="52" column="23" lean-forward="false" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+            <state relative-caret-position="365">
+              <caret line="230" column="18" lean-forward="false" selection-start-line="230" selection-start-column="18" selection-end-line="230" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lookup.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="acct.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="101" column="19" lean-forward="true" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updatecust.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1493">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lookup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/lookup.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1445">
@@ -74,8 +94,8 @@
       <file leaf-file-name="allcust.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/allcust.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="125" column="6" lean-forward="false" selection-start-line="125" selection-start-column="6" selection-end-line="125" selection-end-column="6" />
+            <state relative-caret-position="498">
+              <caret line="110" column="9" lean-forward="true" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -101,10 +121,11 @@
       <list>
         <option value="$PROJECT_DIR$/Asset_Management_App/__init__.py" />
         <option value="$PROJECT_DIR$/Asset_Management_App/models.py" />
-        <option value="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" />
         <option value="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" />
         <option value="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" />
         <option value="$PROJECT_DIR$/Asset_Management_App/views.py" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/newasset.html" />
       </list>
     </option>
   </component>
@@ -259,14 +280,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/newasset.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-734">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/newcust.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -301,14 +314,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/allcust.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="125" column="6" lean-forward="false" selection-start-line="125" selection-start-column="6" selection-end-line="125" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Asset_Management_App/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -317,29 +322,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/lookup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="85" column="51" lean-forward="false" selection-start-line="85" selection-start-column="51" selection-end-line="85" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/newasset.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="230" column="18" lean-forward="false" selection-start-line="230" selection-start-column="18" selection-end-line="230" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/allcust.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="110" column="9" lean-forward="true" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="52" column="23" lean-forward="false" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+        <state relative-caret-position="153">
+          <caret line="101" column="19" lean-forward="true" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1493">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Asset_Management_App/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="87" column="9" lean-forward="false" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+        <state relative-caret-position="1572">
+          <caret line="150" column="19" lean-forward="true" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="19" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/lookup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="85" column="51" lean-forward="false" selection-start-line="85" selection-start-column="51" selection-end-line="85" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>

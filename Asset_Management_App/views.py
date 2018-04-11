@@ -29,7 +29,7 @@ def view_accounting():
 @app.route('/allcust.html', methods=['GET','POST'])
 def custodian_lookup():
     if request.method == 'POST':
-        if request.form.post['Action']:
+        if request.form['Action'] == "Look Up":
             custID = request.form.get('empid', None)
             custName = request.form.get('name', None)
             queryVal = models.Custodian.query.filter((models.Custodian.empID == custID) | (models.Custodian.custName ==
