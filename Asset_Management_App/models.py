@@ -49,7 +49,7 @@ class Checkout(db.Model):
         tagNo = db.Column("TagNo",  db.String(6), unique=False, nullable=False)
         serNo = db.Column("SerNo", db.String(20), unique=False, nullable=True)
         UTAID = db.Column("UTAID", db.String(10), unique=False, nullable=False, primary_key=True)
-        name = db.Column("Name", db.String(20), unique=False, nullable=False)
+        name = db.Column("Name", db.String(20), unique=False, nullable=True)
         email = db.Column("Email", db.String(30), unique=False, nullable=True)
         checkout = db.Column("CheckOut", db.Date, unique=False, nullable=True)
         returnDate = db.Column("ReturnDate", db.Date, unique=False, nullable=True)
