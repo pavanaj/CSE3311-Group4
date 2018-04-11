@@ -186,7 +186,7 @@ def view_checked_out():
     if request.method == 'POST':
         if request.form['Action'] == "View":
             tag = request.form.get('tagno')
-            serial = request.form.get('serialno')
+            serial = request.form.get('se/rialno')
 
             queryVal = models.Checkout.query.filter((models.Checkout.tagNo == tag) | (models.Checkout.serNo == serial)).\
             first()
