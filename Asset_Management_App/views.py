@@ -19,7 +19,7 @@ def view_accounting():
         queryVal2 = models.Assets.query.filter((models.Assets.tagNo == tagNo) | (models.Assets.serialNo == serial)). \
             first()
         result = {'tag': queryVal.tagNo, 'cost': queryVal.cost, 'serialNo': queryVal2.serialNo, 'cat': queryVal2.type,
-                  'desc': queryVal2.description, 'build': queryVal2.bldg, 'room': queryVal2.room,
+                  'desc': queryVal2.description, 'funds': queryVal.fundSource, 'report': queryVal.reportNum,
                   'stat': queryVal2.status, 'cust': queryVal2.custID
         }
         return render_template("acct.html", **result)
@@ -48,9 +48,10 @@ def asset_checkin():
         serialNo = request.form.get("serialno", False)  #Gets serial number for asset if exists
         checkIn = request.form.get("date", False)       #Gets check in date from form
 
-        db.session.query().filter(models.Checkout.tagNo == tagNo or models.Checkout.serialNo == serialNo).\
-        update({"checkin": checkIn}) #Find tuple with tag number of serial number of asset being checked in and updates
-        db.session.commit            #Commit transaction to database
+        new = models.Checkout.query.filter((models.Checkout.tagNo == tagNo) | (models.Checkout.serNo == serialNo)).\
+        first() #Find tuple with tag number of serial number of asset being checked in and updates
+        new.checkin = checkIn
+        db.session.commit()            #Commit transaction to database
     return render_template("checkin.html")  #Template for checking in an asset
 
 #Route for page to check out an asset
@@ -149,6 +150,19 @@ def new_custodian():
 #Route for police report recording
 @app.route('/report.html', methods=['GET', 'POST'])
 def asset_report():
+    if request.method == 'POST':
+        tagNo = request.form.get('tagno', None)
+        serialNo = request.form.get('serialno')
+        status = request.form.get('type')
+        repNo = request.form.get('report')
+        repDate = request.form.get('date')
+
+        editAccount = models.Accounts.query.filter(models.Accounts.tagNo == tagNo)
+        editAsset = models.Assets.query.filter((models.Assets.tagNo == tagNo) | (models.Assets.serialNo == serialNo))
+        editAsset.status = status
+        editAccount.reportNum = repNo
+        editAccount.reportDate = repDate
+        db.session.commit()
     return render_template("report.html")   #Template for filing new report
 
 #Route for updating accounting info
@@ -169,6 +183,16 @@ def update_custodian():
 #Route for viewing checkout information
 @app.route('/viewcheck.html', methods=['GET', 'POST'])
 def view_checked_out():
+    if request.method == 'POST':
+        if request.form['Action'] == "View":
+            tag = request.form.get('tagno')
+            serial = request.form.get('se/rialno')
+
+            queryVal = models.Checkout.query.filter((models.Checkout.tagNo == tag) | (models.Checkout.serNo == serial)).\
+            first()
+            result = {'tagno': queryVal.tagNo, 'serial': queryVal.serNo, 'id': queryVal.UTAID, 'name': queryVal.name,
+                    'checkout': queryVal.checkout, 'return': queryVal.returnDate}
+            return render_template("viewcheck.html", **result)
     return render_template("viewcheck.html")   #Template for viewing checkout information
 
 #Route for viewing custodian info

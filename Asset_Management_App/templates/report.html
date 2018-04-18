@@ -51,7 +51,7 @@
 <h2 align="center">File Asset Report</h2>
 
 <div class="container">
-  <form action="work.html" method = "POST">
+  <form action="{{url_for('asset_report')}}" method = "POST">
     <div class="row">
       <div class="col-10">
         <label for="tagno">Tag Number</label>
@@ -72,7 +72,7 @@
     
     <div class="row">
             <div class="col-10">
-        <label for="status"> New Status</label>
+        <label for="type"> New Status</label>
       </div>
       <div class="col-15">
         <select id="type" name="type">

@@ -51,7 +51,7 @@
 <h2 align="center">View Checked-Out Asset(s)</h2>
 
 <div class="container">
-  <form action="work.html" method = "POST">
+  <form action="{{url_for('view_checked_out')}}" method = "POST">
     <div class="row">
       <div class="col-10">
         <label for="tagno">Tag Number</label>
@@ -77,16 +77,13 @@
     </div>
     <div class="row">
       <div class="col-10">
-        <input type="submit" value="View">
+        <input type="submit" name="Action" value="View">
       </div>
       <div class="col-10">
-        <input type="submit" value="View All">
+        <input type="submit" name="Action" value="View All">
       </div>
       <div class="col-10">
-        <input type="submit" value="Excel">
-      </div>
-      <div class="col-10">
-        <input type="submit" value="Print">
+        <input type="submit" name="Action" value="Excel">
       </div>
       
     <div class="row">
@@ -108,12 +105,12 @@
       <th>Return Date</th>
     </tr>
     <tr>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>      
+      <td> {{tagno}} </td>
+      <td> {{serial}} </td>
+      <td> {{id}} </td>
+      <td> {{name}} </td>
+      <td> {{checkout}} </td>
+      <td> {{return}} </td>
     </tr>
   </table></div>
     </div>
