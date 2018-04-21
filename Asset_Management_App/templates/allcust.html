@@ -102,14 +102,17 @@
       <th>Room</th>
       <th>Email</th>
     </tr>
+           {% for item in entries %}
     <tr>
-      <td> {{empID}} </td>
-      <td> {{name}} </td>
-      <td> {{build}} </td>
-      <td> {{room}} </td>
-      <td> {{email}} </td>
+      <td> {{item[0]}} </td>
+      <td> {{item[1]}} </td>
+      <td> {{item[3]}} </td>
+      <td> {{item[4]}} </td>
+      <td> {{item[2]}} </td>
     </tr>
-  </table></div>
+           {% endfor %}
+  </table>
+      </div>
     </div>
 
       

@@ -2,7 +2,6 @@ from flask import render_template, request
 
 from Asset_Management_App import app, db, models
 
-
 #Routes for base page of web app
 @app.route('/')
 @app.route('/index.html')
@@ -35,9 +34,12 @@ def custodian_lookup():
             queryVal = models.Custodian.query.filter((models.Custodian.empID == custID) | (models.Custodian.custName ==
             custName)).first()
             result = {'empID': queryVal.empID, 'name': queryVal.custName, 'email': queryVal.email,
-                    'build': queryVal.building, 'room': queryVal.room
-            }
-        return render_template("allcust.html", **result)
+                    'build': queryVal.building, 'room': queryVal.room }
+            return render_template("allcust.html", **result)
+        if request.form['Action'] == "View All":
+            cur = db.engine.execute('select * from Custodians')
+            entries = cur.fetchall()
+            return render_template('allcust.html', entries=entries)
     return render_template("allcust.html") #Template for use viewing custodian information
 
 #Route for page for checking in a checked out asset
@@ -86,8 +88,11 @@ def asset_lookup():
                     'id': queryVal.custID, 'cust': queryValCust.custName, 'build': queryVal.bldg, 'room': queryVal.room,
             }   #Creating structure to pass back to html form
             return render_template("lookup.html", **result)
-        #if request.form['Action'] == "View All":
-
+        if request.form['Action'] == "View All":
+            cur = db.engine.execute('select TagNo, SerialNo, Type, Description, AssBldg, AssRoom, CustodianID, CustName'
+                                    ' from Assets JOIN Custodians ON CustodianID = EmpID')
+            entries = cur.fetchall()
+            return render_template('lookup.html', entries=entries)
 
     return render_template("lookup.html")   #Returning to template with input
 
