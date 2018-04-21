@@ -31,24 +31,13 @@ def custodian_lookup():
         if request.form['Action'] == "Look Up":
             custID = request.form.get('empid', None)
             custName = request.form.get('name', None)
-<<<<<<< HEAD
             rows = models.Custodian.query.filter((models.Custodian.empID == custID) |
             (models.Custodian.custName == custName)).first()
             return render_template("allcust.html", rows=rows)
         if request.form['Action'] == "View All":
-            rows = models.Custodian.query.all()
-            return render_template("allcust.html", rows=rows)
-=======
-            queryVal = models.Custodian.query.filter((models.Custodian.empID == custID) | (models.Custodian.custName ==
-            custName)).first()
-            result = {'empID': queryVal.empID, 'name': queryVal.custName, 'email': queryVal.email,
-                    'build': queryVal.building, 'room': queryVal.room }
-            return render_template("allcust.html", **result)
-        if request.form['Action'] == "View All":
             cur = db.engine.execute('select * from Custodians')
             entries = cur.fetchall()
             return render_template('allcust.html', entries=entries)
->>>>>>> d1ef8ff84f4f33bdd0c45ae9ffdf0a3e8311ed69
     return render_template("allcust.html") #Template for use viewing custodian information
 
 #Route for page for checking in a checked out asset
@@ -90,23 +79,13 @@ def asset_lookup():
             tag = request.form.get("tagno", None)   #Gets tag number for asset to lookup
             serial = request.form.get("serialno", None) #Gets serial number for asset to lookup
             #Assigns tuple found in query to a variable
-            queryVal = models.Assets.query.filter((models.Assets.tagNo == tag) | (models.Assets.serialNo == serial)).\
-            first()
-            queryValCust = models.Custodian.query.filter((models.Custodian.empID == queryVal.custID)).first()
-            result = {'tag': queryVal.tagNo, 'serial': queryVal.serialNo, 'cat': queryVal.type, 'desc': queryVal.description,
-                    'id': queryVal.custID, 'cust': queryValCust.custName, 'build': queryVal.bldg, 'room': queryVal.room,
-            }   #Creating structure to pass back to html form
+
             return render_template("lookup.html", **result)
         if request.form['Action'] == "View All":
-<<<<<<< HEAD
-            allAssets = models.Assets.query.all()
-            return render_template("lookup.html", allAssets)
-=======
             cur = db.engine.execute('select TagNo, SerialNo, Type, Description, AssBldg, AssRoom, CustodianID, CustName'
                                     ' from Assets JOIN Custodians ON CustodianID = EmpID')
             entries = cur.fetchall()
             return render_template('lookup.html', entries=entries)
->>>>>>> d1ef8ff84f4f33bdd0c45ae9ffdf0a3e8311ed69
 
     return render_template("lookup.html")   #Returning to template with input
 
