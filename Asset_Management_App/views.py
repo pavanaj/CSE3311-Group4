@@ -81,9 +81,9 @@ def asset_lookup():
             #Assigns tuple found in query to a variable
             queryVal = models.Assets.query.filter((models.Assets.tagNo == tag) | (models.Assets.serialNo == serial)).\
             first()
+            queryValCust = models.Custodian.query.filter((models.Custodian.empID == queryVal.custID)).first()
             result = {'tag': queryVal.tagNo, 'serial': queryVal.serialNo, 'cat': queryVal.type, 'desc': queryVal.description,
-                    'cust': queryVal.custID, 'acq': queryVal.acqDate, 'build': queryVal.bldg, 'room': queryVal.room,
-                    'stat': queryVal.status
+                    'id': queryVal.custID, 'cust': queryValCust.custName, 'build': queryVal.bldg, 'room': queryVal.room,
             }   #Creating structure to pass back to html form
             return render_template("lookup.html", **result)
         #if request.form['Action'] == "View All":
@@ -173,6 +173,7 @@ def old_asset():
         db.session.commit()
 
         return render_template("oldasset.html")
+    return render_template("oldasset.html")
 #Route for police report recording
 @app.route('/report.html', methods=['GET', 'POST'])
 def asset_report():
@@ -200,18 +201,41 @@ def update_accounting():
 @app.route('/updateasset.html', methods=['GET', 'POST'])
 def update_asset():
     if request.method == 'POST':
-        oldTag = request.form.get('oldtagno', None)
-        oldSer = request.form.get('oldserialno', None)
+        if request.form['Action'] == "Update":
+            oldTag = request.form.get('oldtagno', None)
+            oldSer = request.form.get('oldserialno', None)
 
-        updatedAsset = models.Assets.query.filter((models.Assets.tagNo == oldTag) |
+            updatedAsset = models.Assets.query.filter((models.Assets.tagNo == oldTag) |
                        (models.Assets.serialNo == oldSer)).first()
-        result = {'tag': updatedAsset.tagNo, 'serial': updatedAsset.serialNo, 'desc': updatedAsset.description,
-                  'type': updatedAsset.type, 'cust': updatedAsset.custID, 'acq': updatedAsset.acqDate,
-                  'build': updatedAsset.bldg, 'room': updatedAsset.room, 'stat': updatedAsset.status,
-                  'staticTag': updatedAsset.tagNo, 'staticSerial': updatedAsset.serialNo
-        }
+            result = {'tag': updatedAsset.tagNo, 'serial': updatedAsset.serialNo, 'desc': updatedAsset.description,
+                    'type': updatedAsset.type, 'cust': updatedAsset.custID, 'acq': updatedAsset.acqDate,
+                    'build': updatedAsset.bldg, 'room': updatedAsset.room
+            }
 
-        return render_template("updateasset.html", **result)
+            return render_template("updateasset.html", **result)
+        if request.form['Action'] == "Submit":
+            tag = request.form.get('newtag')
+            ser = request.form.get('newserialno')
+            cat = request.form.get('type')
+            acqDate = request.form.get('date')
+            desc = request.form.get('description')
+            build = request.form.get('building')
+            room = request.form.get('room')
+            id = request.form.get('empid')
+
+            new = models.Assets.query.filter((models.Assets.tagNo == tag) | (models.Assets.serialNo == ser)).first()
+            new.serialNo = ser
+            new.type = cat
+            new.acqDate  = acqDate
+            new.description = desc
+            new.bldg = build
+            new.room = room
+            new.custID = id
+
+            db.session.commit()
+
+            return render_template("updateasset.html")
+
     return render_template("updateasset.html")  #Template for updating asset info
 
 #Route for updating custodian info
