@@ -32,12 +32,12 @@ def custodian_lookup():
         if request.form['Action'] == "Look Up":
             custID = request.form.get('empid', None)
             custName = request.form.get('name', None)
-            queryVal = models.Custodian.query.filter((models.Custodian.empID == custID) | (models.Custodian.custName ==
-            custName)).first()
-            result = {'empID': queryVal.empID, 'name': queryVal.custName, 'email': queryVal.email,
-                    'build': queryVal.building, 'room': queryVal.room
-            }
-        return render_template("allcust.html", **result)
+            rows = models.Custodian.query.filter((models.Custodian.empID == custID) |
+            (models.Custodian.custName == custName)).first()
+            return render_template("allcust.html", rows=rows)
+        if request.form['Action'] == "View All":
+            rows = models.Custodian.query.all()
+            return render_template("allcust.html", rows=rows)
     return render_template("allcust.html") #Template for use viewing custodian information
 
 #Route for page for checking in a checked out asset
@@ -86,8 +86,9 @@ def asset_lookup():
                     'id': queryVal.custID, 'cust': queryValCust.custName, 'build': queryVal.bldg, 'room': queryVal.room,
             }   #Creating structure to pass back to html form
             return render_template("lookup.html", **result)
-        #if request.form['Action'] == "View All":
-
+        if request.form['Action'] == "View All":
+            allAssets = models.Assets.query.all()
+            return render_template("lookup.html", allAssets)
 
     return render_template("lookup.html")   #Returning to template with input
 

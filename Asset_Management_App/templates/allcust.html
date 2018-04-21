@@ -51,7 +51,7 @@
 <h2 align="center">View Custodian(s)</h2>
 
 <div class="container">
-  <form action="{{ url_for('custodian_lookup') }}" method = "POST">
+  <form action="{{ url_for('custodian_lookup') }}" method = "POST" name="custodians">
     <div class="row">
       <div class="col-10">
         <label for="empid">Custodian ID</label>
@@ -102,13 +102,15 @@
       <th>Room</th>
       <th>Email</th>
     </tr>
+           (% for row in rows %)
     <tr>
-      <td> {{empID}} </td>
-      <td> {{name}} </td>
-      <td> {{build}} </td>
-      <td> {{room}} </td>
-      <td> {{email}} </td>
+      <td> {{ row[0] }} </td>
+      <td> {{ row[1] }} </td>
+      <td> {{ row[2] }} </td>
+      <td> {{ row[3] }} </td>
+      <td> {{ row[4] }} </td>
     </tr>
+            (% endfor %)
   </table></div>
     </div>
 
