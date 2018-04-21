@@ -107,7 +107,7 @@
         <label for="newserialno">Serial Number</label>
       </div>
       <div class="col-15">
-        <input type="text" id="newserialno" name="newserialno">
+        <input type="text" id="newserialno" name="newserialno" value = {{serial}}>
       </div>
     </div>
     <div class="row">
@@ -115,7 +115,7 @@
         <label for="type">Type</label>
       </div>
       <div class="col-15">
-        <select id="type" name="type">
+        <select id="type" name="type" value = {{type}}>
           <option value="desktop">Desktop</option>
           <option value="laptop">Laptop</option>
           <option value="camera">Camera</option>
@@ -129,7 +129,7 @@
         <label for="date">Acquisition Date</label>
       </div>
       <div class="col-15">
-      <input id="date" type="date">
+      <input id="date" type="date" value = {{acq}}>
       </div>
     </div>
     <div class="row">
@@ -137,7 +137,7 @@
         <label for="description">Description</label>
       </div>
       <div class="col-52">
-        <textarea id="description" name="description" style="height:75px"></textarea>
+        <textarea id="description" name="description" style="height:75px" value={{desc}}></textarea>
       </div>
     </div>
     
@@ -146,7 +146,7 @@
         <label for="building">Building</label>
       </div>
       <div class="col-15">
-        <input type="text" id="building" name="building">
+        <input type="text" id="building" name="building" value={{build}}>
       </div>
       <div class="col-10">
        </div>
@@ -154,7 +154,7 @@
         <label for="room">Room</label>
       </div>
       <div class="col-15">
-        <input type="text" id="room" name="room">
+        <input type="text" id="room" name="room" value=[{room}}>
       </div>
     </div>
         <div class="row">
@@ -163,7 +163,7 @@
         <label for="empid">Custodian ID</label>
       </div>
       <div class="col-15">
-        <input type="text" id="empid" name="empid" minlegth="10" maxlength="10">
+        <input type="text" id="empid" name="empid" minlegth="10" maxlength="10" value={{cust}}>
       </div>
       </div>
       <p>  </p>
