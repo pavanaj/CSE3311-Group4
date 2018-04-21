@@ -51,7 +51,7 @@
 <h2 align="center">Update Asset Form</h2>
 
 <div class="container">
-  <form action="work.html" method="POST">
+  <form action="{{url_for('update_asset')}}" method="POST">
     <div class="row">
       <div class="col-10">
         <label for="oldtagno">Tag Number</label>
@@ -82,7 +82,7 @@
     <div class="col-24">
        </div>
       <div class="col-10">
-        <input type="submit" value="Update">
+        <input type="submit" name="Action" value="Update">
       </div>
       
     </div>
@@ -93,7 +93,7 @@
     <div class="row">
         <h3> <u> Update Asset Details Below </u> </h3>
     </div>
-    
+        <input type="hidden" name="newtag" value = {{tag}}>
         <div class="row">
       <div class="col-10">
         <label for="newserialno">Serial Number</label>
@@ -129,7 +129,7 @@
         <label for="description">Description</label>
       </div>
       <div class="col-52">
-        <textarea id="description" name="description" style="height:75px" value={{desc}}></textarea>
+        <input id="description" name="description" value="{{desc}}"></input>
       </div>
     </div>
     
@@ -146,7 +146,7 @@
         <label for="room">Room</label>
       </div>
       <div class="col-15">
-        <input type="text" id="room" name="room" value=[{room}}>
+        <input type="text" id="room" name="room" value={{room}}>
       </div>
     </div>
         <div class="row">
@@ -163,10 +163,10 @@
 
         <div class="row">
       <div class="col-25">
-         <input type="submit" value="Submit">
+         <input type="submit" name="Action" value="Submit">
       </div>
       <div class="col-15">
-        <input type="reset" value="Clear">
+        <input type="reset" name="Action" value="Clear">
       </div>
     </div>
     
