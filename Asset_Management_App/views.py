@@ -147,6 +147,32 @@ def new_custodian():
 
     return render_template("newcust.html")  #Template for new custodian creation
 
+@app.route('/oldasset.html', methods=['GET', 'POST'])
+def old_asset():
+    if request.method == 'POST':
+        tagNo = request.form.get('tagno', None)
+        serialNo = request.form.get('serialno', None)
+        type = request.form.get('type', None)
+        date = request.form.get('date', None)
+        description = request.form.get('description', None)
+        build = request.form.get('building', None)
+        room = request.form.get('room', None)
+        custID = request.form.get('empid', None)
+
+        cost = request.form.get('cost', None)
+        funds = request.form.get('funds', None)
+        status = request.form.get('status', None)
+        reportNum = None
+        reportDate = None
+
+        newAsset = models.Assets(tagNo=tagNo,  serialNo=serialNo, description=description, type=type,
+                                 custID=custID, acqDate=date, bldg=build, room=room, status=status)
+        newAccount = models.Accounts(tagNo=tagNo,cost=cost,fundSource=funds, reportNum=reportNum, reportDate=reportDate)
+        db.session.add(newAsset)
+        db.session.add(newAccount)
+        db.session.commit()
+
+        return render_template("oldasset.html")
 #Route for police report recording
 @app.route('/report.html', methods=['GET', 'POST'])
 def asset_report():
@@ -173,6 +199,19 @@ def update_accounting():
 #Route for updating asset info
 @app.route('/updateasset.html', methods=['GET', 'POST'])
 def update_asset():
+    if request.method == 'POST':
+        oldTag = request.form.get('oldtagno', None)
+        oldSer = request.form.get('oldserialno', None)
+
+        updatedAsset = models.Assets.query.filter((models.Assets.tagNo == oldTag) |
+                       (models.Assets.serialNo == oldSer)).first()
+        result = {'tag': updatedAsset.tagNo, 'serial': updatedAsset.serialNo, 'desc': updatedAsset.description,
+                  'type': updatedAsset.type, 'cust': updatedAsset.custID, 'acq': updatedAsset.acqDate,
+                  'build': updatedAsset.bldg, 'room': updatedAsset.room, 'stat': updatedAsset.status,
+                  'staticTag': updatedAsset.tagNo, 'staticSerial': updatedAsset.serialNo
+        }
+
+        return render_template("updateasset.html", **result)
     return render_template("updateasset.html")  #Template for updating asset info
 
 #Route for updating custodian info
