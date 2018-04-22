@@ -15,13 +15,11 @@ def view_accounting():
         if request.form['Action'] == "View":
             tagNo = request.form.get('tagno', None)
             serial = request.form.get('serialno', None)
-            queryVal = models.Accounts.query.filter((models.Accounts.tagNo == tagNo)).first()
-            queryVal2 = models.Assets.query.filter((models.Assets.tagNo == tagNo) |
-                                                   (models.Assets.serialNo == serial)).first()
-            result = {'tag': queryVal.tagNo, 'cost': queryVal.cost, 'serialNo': queryVal2.serialNo, 'cat': queryVal2.type,
-                  'desc': queryVal2.description, 'funds': queryVal.fundSource, 'report': queryVal.reportNum,
-                  'stat': queryVal2.status, 'cust': queryVal2.custID}
-            return render_template("acct.html", **result)
+            cur = db.engine.execute('select Assets.TagNo, SerNo, Type, Description, SourceOfFunds, ReportNo, Status,'
+                                    ' Cost, CustodianID from Assets JOIN Accounts ON Assets.TagNo=Accounts.TagNo'
+                                    ' WHERE Assets.TagNo = "'+tagNo+'" OR SerNo = "'+ serial+'"')
+            entries = cur.fetchall()
+            return render_template("acct.html", entries=entries)
 
         if request.form['Action'] == "View All":
             cur = db.engine.execute('select Assets.TagNo, SerNo, Type, Description, SourceOfFunds, ReportNo, Status,'
@@ -38,21 +36,15 @@ def custodian_lookup():
         if request.form['Action'] == "Look Up":
             custID = request.form.get('empid', None)
             custName = request.form.get('name', None)
-            rows = models.Custodian.query.filter((models.Custodian.empID == custID) |
-            (models.Custodian.custName == custName)).first()
-            return render_template("allcust.html", rows=rows)
-        if request.form['Action'] == "View All":
-            rows = models.Custodian.query.all()
-            return render_template("allcust.html", rows=rows)
-            queryVal = models.Custodian.query.filter((models.Custodian.empID == custID) |
-                                                     (models.Custodian.custName == custName)).first()
-            result = {'empID': queryVal.empID, 'name': queryVal.custName, 'email': queryVal.email,
-                    'build': queryVal.building, 'room': queryVal.room }
-            return render_template("allcust.html", **result)
+            cur = db.engine.execute('select * from Custodians where EmpID = ' +custID+ ' OR CustName = "'+custName+'"')
+            entries = cur.fetchall()
+            return render_template('allcust.html', entries=entries)
+
         if request.form['Action'] == "View All":
             cur = db.engine.execute('select * from Custodians')
             entries = cur.fetchall()
             return render_template('allcust.html', entries=entries)
+
     return render_template("allcust.html") #Template for use viewing custodian information
 
 #Route for page for checking in a checked out asset
@@ -263,13 +255,14 @@ def view_checked_out():
     if request.method == 'POST':
         if request.form['Action'] == "View":
             tag = request.form.get('tagno')
-            serial = request.form.get('se/rialno')
+            serial = request.form.get('serialno')
 
-            queryVal = models.Checkout.query.filter((models.Checkout.tagNo == tag) | (models.Checkout.serNo == serial)).\
-            first()
-            result = {'tagno': queryVal.tagNo, 'serial': queryVal.serNo, 'id': queryVal.UTAID, 'name': queryVal.name,
-                    'checkout': queryVal.checkout, 'return': queryVal.returnDate}
-            return render_template("viewcheck.html", **result)
+            cur = db.engine.execute('select Assets.TagNo, Assets.SerialNo, CustodianID, CustName, UTAID, Name, CheckOut, ReturnDate'
+                                    ' from Assets JOIN Custodians ON CustodianID=EmpID '
+                                    ' JOIN Checkout ON Assets.TagNo=Checkout.TagNo'
+                                    ' WHERE Assets.TagNo = "'+ tag + '" OR Assets.SerialNo = "'+serial+'"')
+            entries = cur.fetchall()
+            return render_template('viewcheck.html', entries=entries)
 
         if request.form['Action'] == "View All":
             cur = db.engine.execute('select Assets.TagNo, Assets.SerialNo, CustodianID, CustName, UTAID, Name, CheckOut, ReturnDate'
