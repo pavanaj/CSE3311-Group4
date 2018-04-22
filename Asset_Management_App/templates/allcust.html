@@ -102,16 +102,6 @@
       <th>Room</th>
       <th>Email</th>
     </tr>
-           (% for row in rows %)
-    <tr>
-      <td> {{ row[0] }} </td>
-      <td> {{ row[1] }} </td>
-      <td> {{ row[2] }} </td>
-      <td> {{ row[3] }} </td>
-      <td> {{ row[4] }} </td>
-    </tr>
-            (% endfor %)
-  </table></div>
            {% for item in entries %}
     <tr>
       <td> {{item[0]}} </td>
@@ -122,10 +112,9 @@
     </tr>
            {% endfor %}
   </table>
-      </div>
+    </div>
     </div>
 
-      
     </div>
   </form>
 </div>

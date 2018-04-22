@@ -44,8 +44,8 @@ def custodian_lookup():
         if request.form['Action'] == "View All":
             rows = models.Custodian.query.all()
             return render_template("allcust.html", rows=rows)
-            queryVal = models.Custodian.query.filter((models.Custodian.empID == custID) | (models.Custodian.custName ==
-            custName)).first()
+            queryVal = models.Custodian.query.filter((models.Custodian.empID == custID) |
+                                                     (models.Custodian.custName == custName)).first()
             result = {'empID': queryVal.empID, 'name': queryVal.custName, 'email': queryVal.email,
                     'build': queryVal.building, 'room': queryVal.room }
             return render_template("allcust.html", **result)
@@ -93,14 +93,11 @@ def asset_lookup():
         if request.form['Action'] == "Look Up":
             tag = request.form.get("tagno", None)   #Gets tag number for asset to lookup
             serial = request.form.get("serialno", None) #Gets serial number for asset to lookup
-            #Assigns tuple found in query to a variable
-            queryVal = models.Assets.query.filter((models.Assets.tagNo == tag) | (models.Assets.serialNo == serial)).\
-            first()
-            queryValCust = models.Custodian.query.filter((models.Custodian.empID == queryVal.custID)).first()
-            result = {'tag': queryVal.tagNo, 'serial': queryVal.serialNo, 'cat': queryVal.type, 'desc': queryVal.description,
-                    'id': queryVal.custID, 'cust': queryValCust.custName, 'build': queryVal.bldg, 'room': queryVal.room,
-            }   #Creating structure to pass back to html form
-            return render_template("lookup.html", **result)
+            cur = db.engine.execute('select TagNo, SerialNo, Type, Description, AssBldg, AssRoom, CustodianID, CustName'
+                                    ' from Assets JOIN Custodians ON CustodianID = EmpID'
+                                    ' where TagNo = "' + tag + '" OR SerialNo = "' + serial + '" ')
+            entries = cur.fetchall()
+            return render_template('lookup.html', entries=entries)
         if request.form['Action'] == "View All":
             cur = db.engine.execute('select TagNo, SerialNo, Type, Description, AssBldg, AssRoom, CustodianID, CustName'
                                     ' from Assets JOIN Custodians ON CustodianID = EmpID')
