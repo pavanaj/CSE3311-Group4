@@ -15,14 +15,14 @@ def view_accounting():
         if request.form['Action'] == "View":
             tagNo = request.form.get('tagno', None)
             serial = request.form.get('serialno', None)
-            cur = db.engine.execute('select Assets.TagNo, SerNo, Type, Description, SourceOfFunds, ReportNo, Status,'
-                                    ' Cost, CustodianID from Assets JOIN Accounts ON Assets.TagNo=Accounts.TagNo'
-                                    ' WHERE Assets.TagNo = "'+tagNo+'" OR SerNo = "'+ serial+'"')
+            cur = db.engine.execute("select Assets.TagNo, SerialNo, Type, Description, SoureOfFunds, ReportNo, Status,"
+                                    " Cost, CustodianID from Assets JOIN Accounts ON Assets.TagNo=Accounts.TagNo"
+                                    " WHERE Assets.TagNo = \"" + tagNo + '\" OR SerialNo = \"' + serial + '\"')
             entries = cur.fetchall()
             return render_template("acct.html", entries=entries)
 
         if request.form['Action'] == "View All":
-            cur = db.engine.execute('select Assets.TagNo, SerNo, Type, Description, SourceOfFunds, ReportNo, Status,'
+            cur = db.engine.execute('select Assets.TagNo, SerialNo, Type, Description, SoureOfFunds, ReportNo, Status,'
                                     ' Cost, CustodianID from Assets JOIN Accounts ON Assets.TagNo=Accounts.TagNo')
             entries = cur.fetchall()
             return render_template("acct.html", entries=entries)
