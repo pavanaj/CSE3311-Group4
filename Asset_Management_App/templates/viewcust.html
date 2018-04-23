@@ -51,7 +51,7 @@
 <h2 align="center">View Assets of Custodian</h2>
 
 <div class="container">
-  <form action="work.html" method = "POST">
+  <form action="{{url_for('view_cust_assets')}}" method = "POST">
     <div class="row">
       <div class="col-10">
         <label for="empid">Custodian ID</label>
@@ -98,14 +98,15 @@
       <th>Building</th>
       <th>Room</th>
     </tr>
-    <tr>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>
-      <td> ... </td>      
+       {% for item in entries %}
+      <td> {{item[0]}} </td>
+      <td> {{item[1]}} </td>
+      <td> {{item[2]}} </td>
+      <td> {{item[3]}} </td>
+      <td> {{item[4]}} </td>
+      <td> {{item[5]}} </td>
     </tr>
+     {% endfor %}
   </table>
       </div>
     </div>

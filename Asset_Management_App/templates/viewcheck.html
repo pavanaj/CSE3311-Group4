@@ -104,19 +104,22 @@
       <th>Employee ID</th>
       <th>Employee Name</th>
       <th>Checkout Date</th>
-      <th>Return Date</th>
+      <th>Expected Return Date</th>
     </tr>
-    <tr>
-      <td> {{tagno}} </td>
-      <td> {{serial}} </td>
-      <td> {{custid}} </td>
-      <td> {{custname}} </td>
-      <td> {{empid}} </td>
-      <td> {{empname}} </td>
-      <td> {{checkout}} </td>
-      <td> {{return}} </td>
+       {% for item in entries %}
+     <tr>
+      <td> {{item[0]}} </td>
+      <td> {{item[1]}} </td>
+      <td> {{item[2]}} </td>
+      <td> {{item[3]}} </td>
+      <td> {{item[4]}} </td>
+      <td> {{item[5]}} </td>
+      <td> {{item[6]}} </td>
+      <td> {{item[7]}} </td>
     </tr>
-  </table></div>
+     {% endfor %}
+  </table>
+      </div>
     </div>
       
     </div>
