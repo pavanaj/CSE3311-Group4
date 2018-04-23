@@ -220,16 +220,16 @@ def update_asset():
 
             return render_template("updateasset.html", **result)
         if request.form['Action'] == "Submit":
-            tag = request.form.get('newtag')
-            ser = request.form.get('newserialno')
-            cat = request.form.get('type')
-            acqDate = request.form.get('date')
-            desc = request.form.get('description')
-            build = request.form.get('building')
-            room = request.form.get('room')
-            id = request.form.get('empid')
+            tag = request.form.get('newtag', None)
+            ser = request.form.get('newserialno', None)
+            cat = request.form.get('type', None)
+            acqDate = request.form.get('date', None)
+            desc = request.form.get('description', None)
+            build = request.form.get('building', None)
+            room = request.form.get('room', None)
+            id = request.form.get('empid', None)
 
-            new = models.Assets.query.filter((models.Assets.tagNo == tag) | (models.Assets.serialNo == ser)).first()
+            new = models.Assets.query.filter((models.Assets.tagNo == tag)).first()
             new.serialNo = ser
             new.type = cat
             new.acqDate  = acqDate
@@ -247,6 +247,36 @@ def update_asset():
 #Route for updating custodian info
 @app.route('/updatecust.html', methods=['GET', 'POST'])
 def update_custodian():
+    if request.method == 'POST':
+        if request.form['Action'] == "Update":
+            oldID = request.form.get('oldempid', None)
+            oldName = request.form.get('oldname', None)
+
+            updatedCust = models.Custodian.query.filter((models.Custodian.empID == oldID) | (models.Custodian.\
+            empID == oldName)).first()
+
+            result = {'id': updatedCust.empID, 'name': updatedCust.custName, 'email':updatedCust.email,
+                      'build':updatedCust.building, 'room': updatedCust.room
+            }
+            return render_template("updatecust.html", **result)
+        if request.form['Action'] == 'Submit':
+            id = request.form.get('newid', None)
+            name = request.form.get('newname', None)
+            build = request.form.get('building', None)
+            room = request.form.get('room', None)
+            email = request.form.get('email', None)
+
+            new = models.Custodian.query.filter((models.Custodian.empID == id) ).first()
+
+            new.empID = id
+            new.custName = name
+            new.email = email
+            new.building = build
+            new.room = room
+
+            db.session.commit()
+
+            return render_template("updatecust.html")
     return render_template("updatecust.html")   #Template for updating custodian info
 
 #Route for viewing checkout information

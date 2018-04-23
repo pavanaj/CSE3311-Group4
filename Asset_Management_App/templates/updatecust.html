@@ -86,13 +86,13 @@
     <div class="row">
         <h3> <u> Update Custodian Details Below </u> </h3>
     </div>
-    
+        <input type="hidden" id = "newid" name="newid" value={{id}}>
         <div class="row">
       <div class="col-12">
         <label for="newname">Custodian Name</label>
       </div>
       <div class="col-15">
-        <input type="text" id="newname" name="newname">
+        <input type="text" id="newname" name="newname" value={{name}}>
       </div>
     </div>
     
@@ -101,7 +101,7 @@
         <label for="building">Building</label>
       </div>
       <div class="col-15">
-        <input type="text" id="building" name="building">
+        <input type="text" id="building" name="building" value={{build}}>
       </div>
       
       <div class="col-10">
@@ -112,7 +112,7 @@
         <label for="room">Room</label>
       </div>
       <div class="col-15">
-        <input type="text" id="room" name="room">
+        <input type="text" id="room" name="room" value={{room}}>
       </div>
     </div>
     
@@ -122,7 +122,7 @@
         <label for="email">Email</label>
       </div>
       <div class="col-15">
-        <input type="text" id="email" name="email" >
+        <input type="text" id="email" name="email" value={{email}}>
       </div>
     </div>
     
