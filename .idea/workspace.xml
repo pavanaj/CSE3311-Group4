@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="682098c6-1400-4557-8165-8e0b00ff98a6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" afterDir="false" />
+=======
     <list default="true" id="7e32a701-d6c6-4de0-b256-2cb88a71c4e6" name="Default" comment="">
 <<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" />
 =======
       <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" afterDir="false" />
+>>>>>>> 0dedf123e02556a2dc7d7b36ed33c31cec91e255
       <change beforePath="$PROJECT_DIR$/Asset_Management_App/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/views.py" afterDir="false" />
 >>>>>>> 91f8549227beb074b6da21871eb470046a52cb57
     </list>
@@ -22,12 +28,26 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
 =======
     <leaf>
+<<<<<<< HEAD
+      <file leaf-file-name="acct.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
+=======
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
 >>>>>>> 91f8549227beb074b6da21871eb470046a52cb57
         <entry file="file://$PROJECT_DIR$/Asset_Management_App/views.py">
+>>>>>>> 0dedf123e02556a2dc7d7b36ed33c31cec91e255
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="19" column="78" lean-forward="true" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
+            <state relative-caret-position="744">
+              <caret line="85" column="44" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="91" lean-forward="true" selection-start-line="17" selection-start-column="91" selection-end-line="17" selection-end-column="91" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -35,15 +55,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="acct.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
+<<<<<<< HEAD
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-629">
-              <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+            <state relative-caret-position="357">
+              <caret line="75" column="31" lean-forward="true" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+=======
 <<<<<<< HEAD
       <file leaf-file-name="allcust.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/allcust.html">
@@ -88,18 +106,12 @@
             <state relative-caret-position="410">
               <caret line="119" column="17" lean-forward="true" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
 >>>>>>> 91f8549227beb074b6da21871eb470046a52cb57
+>>>>>>> 0dedf123e02556a2dc7d7b36ed33c31cec91e255
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>viewcus</find>
-      <find>allcust</find>
-      <find>viewc</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -107,6 +119,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" />
+=======
         <option value="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" />
 <<<<<<< HEAD
 =======
@@ -115,25 +130,34 @@
         <option value="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" />
         <option value="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" />
 >>>>>>> 91f8549227beb074b6da21871eb470046a52cb57
+>>>>>>> 0dedf123e02556a2dc7d7b36ed33c31cec91e255
         <option value="$PROJECT_DIR$/Asset_Management_App/views.py" />
         <option value="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" />
       </list>
     </option>
   </component>
 <<<<<<< HEAD
+  <component name="ProjectFrameBounds" extendedState="6">
+=======
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="7">
+>>>>>>> 0dedf123e02556a2dc7d7b36ed33c31cec91e255
     <option name="x" value="240" />
     <option name="y" value="135" />
     <option name="width" value="1440" />
     <option name="height" value="810" />
   </component>
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 91f8549227beb074b6da21871eb470046a52cb57
+>>>>>>> 0dedf123e02556a2dc7d7b36ed33c31cec91e255
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,7 +180,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -176,11 +199,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7e32a701-d6c6-4de0-b256-2cb88a71c4e6" name="Default" comment="" />
-      <created>1524349655485</created>
+      <changelist id="682098c6-1400-4557-8165-8e0b00ff98a6" name="Default" comment="" />
+      <created>1524509701357</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1524349655485</updated>
+      <updated>1524509701357</updated>
     </task>
     <servers />
   </component>
@@ -192,79 +215,62 @@
 >>>>>>> 91f8549227beb074b6da21871eb470046a52cb57
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17486338" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Python Console" order="0" />
-      <window_info anchor="bottom" id="Run" order="6" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24980484" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/lookup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="118" column="17" lean-forward="true" selection-start-line="118" selection-start-column="17" selection-end-line="118" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/allcust.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="94" column="8" lean-forward="true" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
+        <state relative-caret-position="289">
+          <caret line="77" column="43" lean-forward="true" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html">
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-497">
-          <caret line="59" column="38" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
+        <state relative-caret-position="744">
+          <caret line="85" column="44" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="119" column="17" lean-forward="true" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/models.py">
+=======
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/lookup.html">
 =======
     <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
 >>>>>>> 91f8549227beb074b6da21871eb470046a52cb57
+>>>>>>> 0dedf123e02556a2dc7d7b36ed33c31cec91e255
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-629">
-          <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+        <state relative-caret-position="357">
+          <caret line="75" column="31" lean-forward="true" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Asset_Management_App/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="19" column="78" lean-forward="true" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
+        <state relative-caret-position="289">
+          <caret line="17" column="91" lean-forward="true" selection-start-line="17" selection-start-column="91" selection-end-line="17" selection-end-column="91" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
