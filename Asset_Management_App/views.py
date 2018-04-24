@@ -1,5 +1,5 @@
 from flask import render_template, request
-
+import csv
 from Asset_Management_App import app, db, models
 
 #Routes for base page of web app
@@ -45,6 +45,15 @@ def custodian_lookup():
             entries = cur.fetchall()
             return render_template('allcust.html', entries=entries)
 
+        if request.form['Action'] == "Excel":
+            cur = db.engine.execute('select * from Custodians')
+            entries = cur.fetchall()
+            with open('Custodians.csv', 'w') as out:
+                printFile = csv.writer(out)
+                printFile.writerow(['Custodian ID', 'Name', 'Email', 'Building', 'Room'])
+                for entry in entries:
+                    printFile.writerow(entry)
+            return render_template("allcust.html")
     return render_template("allcust.html") #Template for use viewing custodian information
 
 #Route for page for checking in a checked out asset
@@ -95,6 +104,15 @@ def asset_lookup():
                                     ' from Assets JOIN Custodians ON CustodianID = EmpID')
             entries = cur.fetchall()
             return render_template('lookup.html', entries=entries)
+        if request.form['Action'] == "Excel":
+            cur = db.engine.execute('select * from Assets')
+            entries = cur.fetchall()
+            with open('Assets.csv', 'w') as out:
+                printFile = csv.writer(out)
+                printFile.writerow(['Tag No.', 'Serial No', 'Description', 'Type', 'Custodian ID', 'Acquisition Date','Building', 'Room', 'Status'])
+                for entry in entries:
+                    printFile.writerow(entry)
+            return render_template("lookup.html")
     return render_template("lookup.html")   #Returning to template with input
 
 #Route for new asset page
@@ -195,13 +213,45 @@ def asset_report():
         editAsset.status = status
         editAccount.reportNum = repNo
         editAccount.reportDate = repDate
+
         db.session.commit()
     return render_template("report.html")   #Template for filing new report
 
 #Route for updating accounting info
 @app.route('/updateacct.html', methods=['GET', 'POST'])
 def update_accounting():
-    return render_template("updateacct.html")   #Template for updating accounting info
+    if request.method == 'POST':
+        if request.form['Action'] == "Update":
+            oldTag = request.form.get('oldtagno', None)
+
+            updatedAcct = models.Accounts.query.filter((models.Accounts.tagNo == oldTag)).first()
+            upStat = models.Assets.query.filter((models.Assets.tagNo == oldTag)).first()
+            result = {'tag':updatedAcct.tagNo, 'cost': updatedAcct.cost, 'funds': updatedAcct.fundSource,
+                      'stat':upStat.status
+            }
+
+            return render_template("updateacct.html", **result)
+        if request.form['Action'] == "Submit":
+            tag = request.form.get('newtag', None)
+            cost = request.form.get('cost', None)
+            funds = request.form.get('funds', None)
+            stats = request.form.get('status', None)
+
+            newAsset = models.Assets.query.filter((models.Assets.tagNo==tag))
+            newAccount = models.Accounts.query.filter((models.Accounts.tagNo == tag))
+            newAccount.cost = cost
+            newAccount.fundSource = funds
+            newAsset.status = stats
+
+            db.session.commit()
+            result={'tag':'', 'cost':'', funds:'', 'stat':'' }
+
+            return render_template("updateacct.html", **result)
+        if request.form['Action'] == "Clear":
+            result={'tag':'', 'cost':'', funds:'', 'stat':''}
+
+            return render_template("updateacct.html", **result)
+        return render_template("updateacct.html")   #Template for updating accounting info
 
 #Route for updating asset info
 @app.route('/updateasset.html', methods=['GET', 'POST'])
@@ -300,7 +350,16 @@ def view_checked_out():
                                     ' JOIN Checkout ON Assets.TagNo=Checkout.TagNo')
             entries = cur.fetchall()
             return render_template('viewcheck.html', entries=entries)
-
+        if request.form['Action'] == "Excel":
+            cur = db.engine.execute('select * from Checkout')
+            entries = cur.fetchall()
+            with open('Checkout.csv', 'w') as out:
+                printFile = csv.writer(out)
+                printFile.writerow(['Tag No', 'Serial No', 'UTA ID', 'Name', 'Email', 'Checkout Date',
+                                          'Return Date', 'Checkin Date'])
+                for entry in entries:
+                    printFile.writerow(entry)
+            return render_template("viewcheck.html")
     return render_template("viewcheck.html")   #Template for viewing checkout information
 
 #Route for viewing custodian info

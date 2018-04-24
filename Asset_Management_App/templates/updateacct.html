@@ -51,7 +51,7 @@
 <h2 align="center">Update Accounting Info</h2>
 
 <div class="container">
-  <form action="work.html" method = "POST">
+  <form action={{url_for('update_accounting')}} method = "POST">
     <div class="row">
       <div class="col-12">
         <label for="oldtagno">Tag Number</label>
@@ -67,6 +67,7 @@
       </div>
       <div class="col-15">
         <input type="text" id="newserialno" name="newserialno" placeholder="Enter S/N if known">
+        <input type="hidden" id="newtag" name="newtag" value ={{tag}}>
       </div>
     </div>
     
@@ -80,7 +81,7 @@
     <div class="col-24">
        </div>
       <div class="col-10">
-        <input type="submit" value="Update">
+        <input type="submit" name="Action" value="Update">
       </div>
       
     </div>
@@ -95,7 +96,7 @@
         <label for="cost">Cost</label>
       </div>
       <div class="col-15">
-        <input type="text" id="cost" name="cost">
+        <input type="text" id="cost" name="cost" value={{cost}}>
       </div>
         </div>
     <div class="row">
@@ -103,7 +104,7 @@
         <label for="funds">Source of Funds</label>
       </div>
       <div class="col-15">
-        <input type="text" id="funds" name="funds">
+        <input type="text" id="funds" name="funds" value ={{funds}}>
       </div>
     </div>
     
@@ -112,7 +113,7 @@
         <label for="status">Status</label>
       </div>
             <div class="col-15">
-        <select id="status" name="status">
+        <select id="status" name="status" value={{stat}}>
           <option value="active">Active</option>
           <option value="stolen">Missing(Stolen)</option>
           <option value="delete">Missing(Hold for Deletion)</option>
@@ -128,10 +129,10 @@
     
     <div class="row">
       <div class="col-25">
-         <input type="submit" value="Submit">
+         <input type="submit" name="Action" value="Submit">
       </div>
       <div class="col-15">
-        <input type="reset" value="Clear">
+        <input type="reset" name="Action" value="Clear">
       </div>
     </div>
   </form>
