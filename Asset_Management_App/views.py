@@ -26,7 +26,15 @@ def view_accounting():
                                     ' Cost, CustodianID from Assets JOIN Accounts ON Assets.TagNo=Accounts.TagNo')
             entries = cur.fetchall()
             return render_template("acct.html", entries=entries)
-
+        if request.form['Action'] == "Excel":
+            cur = db.engine.execute('select * from Accounts')
+            entries = cur.fetchall()
+            with open('Accounts.csv', 'w') as out:
+                printFile = csv.writer(out)
+                printFile.writerow(['Tag No', 'Cost', 'Fund Source', 'Report Number', 'Report Date'])
+                for entry in entries:
+                    printFile.writerow(entry)
+            return render_template("acct.html")
     return render_template("acct.html") #Template to use for viewing account information
 
 #Route for page for custodian lookup
