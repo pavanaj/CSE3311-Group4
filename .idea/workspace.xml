@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c1a88b4-72ef-45cc-87f2-6d1fee220379" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/help.html" afterDir="false" />
+    <list default="true" id="cfc818bb-7d83-4acb-9b67-bd67c3a784ac" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/checkin.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/checkin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/userhelp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/newasset.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/newasset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/newcust.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/newcust.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/oldasset.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/oldasset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/updateacct.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/updateacct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/updateasset.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/updateasset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/work.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/work.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,33 +31,97 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="help.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/help.html">
+      <file leaf-file-name="newasset.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/newasset.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-595">
-              <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-              <folding>
-                <element signature="e#2902#2908#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="357">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/index.html">
+      <file leaf-file-name="newcust.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/newcust.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
+            <state relative-caret-position="204">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="oldasset.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/oldasset.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="report.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/report.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateacct.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updateacct.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateasset.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updateasset.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updatecust.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userhelp.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/userhelp.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewcheck.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewcust.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>update_cus</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,14 +129,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html" />
-        <option value="$PROJECT_DIR$/Asset_Management_App/views.py" />
         <option value="$PROJECT_DIR$/Asset_Management_App/templates/help.html" />
         <option value="$PROJECT_DIR$/Asset_Management_App/templates/index.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/work.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/checkin.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/checkout.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/newasset.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/newcust.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/oldasset.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/report.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/updateacct.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/updateasset.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
     <option name="y" value="135" />
     <option name="width" value="1440" />
@@ -66,7 +160,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -89,7 +182,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="help.html&#9;FILE&#9;file://C:/Users/biyan/AppData/Local/Programs/Python/Python36-32/Lib/idlelib/help.html" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -108,11 +205,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0c1a88b4-72ef-45cc-87f2-6d1fee220379" name="Default" comment="" />
-      <created>1524719166546</created>
+      <changelist id="cfc818bb-7d83-4acb-9b67-bd67c3a784ac" name="Default" comment="" />
+      <created>1524755136289</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1524719166546</updated>
+      <updated>1524755136289</updated>
     </task>
     <servers />
   </component>
@@ -120,60 +217,152 @@
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24980484" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24980484" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Python Console" order="0" />
+      <window_info anchor="bottom" id="Run" order="6" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="5" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/views.py">
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/work.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="310" column="55" lean-forward="true" selection-start-line="310" selection-start-column="55" selection-end-line="310" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="3434">
+          <caret line="202" column="7" lean-forward="true" selection-start-line="202" selection-start-column="7" selection-end-line="202" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/idlelib/help.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="84" column="10" lean-forward="true" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+        <state relative-caret-position="136">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/allcust.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/checkin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/checkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
+        <state relative-caret-position="408">
+          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/help.html">
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/lookup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-595">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding>
-            <element signature="e#2902#2908#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/newasset.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/newcust.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/oldasset.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updateacct.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updateasset.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/userhelp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
         </state>
       </provider>
     </entry>
