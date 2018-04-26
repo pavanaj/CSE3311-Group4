@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c1a88b4-72ef-45cc-87f2-6d1fee220379" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/help.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,23 +14,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="updatecust.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html">
+      <file leaf-file-name="help.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/help.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="84" column="10" lean-forward="true" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+            <state relative-caret-position="-595">
+              <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+              <folding>
+                <element signature="e#2902#2908#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Asset_Management_App/views.py">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="310" column="55" lean-forward="true" selection-start-line="310" selection-start-column="55" selection-end-line="310" selection-end-column="55" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -53,10 +50,12 @@
       <list>
         <option value="$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html" />
         <option value="$PROJECT_DIR$/Asset_Management_App/views.py" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/help.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/index.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="240" />
     <option name="y" value="135" />
     <option name="width" value="1440" />
@@ -158,6 +157,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="84" column="10" lean-forward="true" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/help.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-595">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding>
+            <element signature="e#2902#2908#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
