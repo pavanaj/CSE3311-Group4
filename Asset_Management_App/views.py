@@ -1,7 +1,6 @@
-from flask import render_template, request
+from flask import render_template, request, redirect
 import csv
 from Asset_Management_App import app, db, models
-from datetime import date
 
 #Routes for base page of web app
 @app.route('/')
@@ -253,14 +252,11 @@ def update_accounting():
             newAsset.status = stats
 
             db.session.commit()
-            result={'tag':'', 'cost':'', funds:'', 'stat':'' }
 
-            return render_template("updateacct.html", **result)
+            return redirect("updateacct.html")
         if request.form['Action'] == "Clear":
-            result={'tag':'', 'cost':'', funds:'', 'stat':''}
-
-            return render_template("updateacct.html", **result)
-        return render_template("updateacct.html")   #Template for updating accounting info
+            return redirect("updateacct.html")
+    return render_template("updateacct.html")   #Template for updating accounting info
 
 #Route for updating asset info
 @app.route('/updateasset.html', methods=['GET', 'POST'])
@@ -303,6 +299,8 @@ def update_asset():
             db.session.commit()
 
             return render_template("updateasset.html")
+        if request.form['Action'] == "Clear":
+            return redirect("updateasset.html")
 
     return render_template("updateasset.html")  #Template for updating asset info
 
@@ -321,7 +319,7 @@ def update_custodian():
                       'build':updatedCust.building, 'room': updatedCust.room
             }
             return render_template("updatecust.html", **result)
-        if request.form['Action'] == 'Submit':
+        if request.form['Action'] == "Submit":
             id = request.form.get('newid', None)
             name = request.form.get('newname', None)
             build = request.form.get('building', None)
@@ -339,6 +337,8 @@ def update_custodian():
             db.session.commit()
 
             return render_template("updatecust.html")
+        if request.form['Action'] == "Clear":
+            return redirect("updatecust.html")
     return render_template("updatecust.html")   #Template for updating custodian info
 
 #Route for viewing checkout information

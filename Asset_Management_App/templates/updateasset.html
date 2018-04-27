@@ -47,6 +47,7 @@
       </div>
   </div>
     <a href="work.html" class="w3-button w3-bar-item">Help</a>
+    <a href="{{url_for(clear_)}}"><button>"Clear"</button></a>
 </nav>
 
 <h2 align="center">Update Asset Form</h2>
@@ -122,7 +123,7 @@
         <label for="date">Acquisition Date</label>
       </div>
       <div class="col-15">
-      <input id="date" type="text" value = "{{acq}}">
+      <input id="date" name="date" type="text" value = "{{acq}}">
       </div>
     </div>
     <div class="row">
@@ -167,7 +168,7 @@
          <input type="submit" name="Action" value="Submit">
       </div>
       <div class="col-15">
-        <input type="reset" name="Action" value="Clear">
+        <input type="submit" name="Action" value="Clear">
       </div>
     </div>
     
