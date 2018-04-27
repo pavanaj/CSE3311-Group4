@@ -1,6 +1,7 @@
 from flask import render_template, request
 import csv
 from Asset_Management_App import app, db, models
+from datetime import date
 
 #Routes for base page of web app
 @app.route('/')
@@ -275,7 +276,9 @@ def update_asset():
                     'type': updatedAsset.type, 'cust': updatedAsset.custID, 'acq': updatedAsset.acqDate,
                     'build': updatedAsset.bldg, 'room': updatedAsset.room
             }
-
+            print(updatedAsset.acqDate)
+            if(result['acq'] is None):
+                result['acq'] = "0000-00-00"
             return render_template("updateasset.html", **result)
         if request.form['Action'] == "Submit":
             tag = request.form.get('newtag', None)
@@ -286,6 +289,7 @@ def update_asset():
             build = request.form.get('building', None)
             room = request.form.get('room', None)
             id = request.form.get('empid', None)
+            print(acqDate)
 
             new = models.Assets.query.filter((models.Assets.tagNo == tag)).first()
             new.serialNo = ser
