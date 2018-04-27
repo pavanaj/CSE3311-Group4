@@ -17,5 +17,5 @@ Tag No.,Serial No,Description,Type,Custodian ID,Acquisition Date,Building,Room,S
 000016,8lmAq6kP,"HP 13 inch laptop, 3.0 ghz",Laptop,1000000020,2018-02-10,ERB,432,Active
 000017,Ka73Hu9s,"Lenovo Desktop Computer, 2.8 ghz",Desktop,1000000018,2017-11-19,ERB,601,Missing(Stolen)
 000018,P05kN4bQ,"iPad 2, White",Tablet,1000000008,2017-12-05,ERB,543,Active
-000019,266naFt0,"Dell 15 inch laptop, black",laptop,1000000012,,ERB,360,Missing(Hold for Deletion)
+000019,266naFt0,"Dell 15 inch laptop, black",desktop,1000000012,,ERB,360,Missing(Hold for Deletion)
 000020,L3nA47ls,Minolta 15MP white,Camera,1000000015,2018-01-19,ERB,650,Active

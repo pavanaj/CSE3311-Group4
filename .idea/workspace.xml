@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="682098c6-1400-4557-8165-8e0b00ff98a6" name="Default" comment="">
+    <list default="true" id="cfc818bb-7d83-4acb-9b67-bd67c3a784ac" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" afterDir="false" />
-=======
-    <list default="true" id="7e32a701-d6c6-4de0-b256-2cb88a71c4e6" name="Default" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" />
-=======
       <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" afterDir="false" />
->>>>>>> 0dedf123e02556a2dc7d7b36ed33c31cec91e255
-      <change beforePath="$PROJECT_DIR$/Asset_Management_App/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/views.py" afterDir="false" />
->>>>>>> 91f8549227beb074b6da21871eb470046a52cb57
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/checkin.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/checkin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/userhelp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/newasset.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/newasset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/newcust.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/newcust.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/oldasset.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/oldasset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/updateacct.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/updateacct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/updateasset.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/updateasset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/work.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/work.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,90 +30,93 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-<<<<<<< HEAD
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-=======
     <leaf>
-<<<<<<< HEAD
-      <file leaf-file-name="acct.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
-=======
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
->>>>>>> 91f8549227beb074b6da21871eb470046a52cb57
-        <entry file="file://$PROJECT_DIR$/Asset_Management_App/views.py">
->>>>>>> 0dedf123e02556a2dc7d7b36ed33c31cec91e255
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="85" column="44" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Asset_Management_App/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="91" lean-forward="true" selection-start-line="17" selection-start-column="91" selection-end-line="17" selection-end-column="91" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Asset_Management_App/models.py">
+      <file leaf-file-name="newasset.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/newasset.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="75" column="31" lean-forward="true" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
-=======
-<<<<<<< HEAD
-      <file leaf-file-name="allcust.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/allcust.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="82" column="1" lean-forward="false" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
-              <folding />
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Asset_Management_App/models.py">
+      <file leaf-file-name="newcust.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/newcust.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="50" lean-forward="true" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
-              <folding />
+            <state relative-caret-position="204">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Asset_Management_App/__init__.py">
+      <file leaf-file-name="oldasset.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/oldasset.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="357">
+              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/create.sql">
+      <file leaf-file-name="report.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/report.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-=======
+            <state relative-caret-position="306">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateacct.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updateacct.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateasset.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updateasset.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updatecust.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userhelp.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/userhelp.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="viewcheck.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="119" column="17" lean-forward="true" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
->>>>>>> 91f8549227beb074b6da21871eb470046a52cb57
->>>>>>> 0dedf123e02556a2dc7d7b36ed33c31cec91e255
+            <state relative-caret-position="306">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewcust.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -119,45 +129,37 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/help.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/index.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/work.html" />
         <option value="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" />
-=======
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/checkin.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/checkout.html" />
         <option value="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" />
-<<<<<<< HEAD
-=======
-        <option value="$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/newasset.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/newcust.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/oldasset.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/report.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/updateacct.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/updateasset.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html" />
         <option value="$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html" />
-        <option value="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" />
-        <option value="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" />
->>>>>>> 91f8549227beb074b6da21871eb470046a52cb57
->>>>>>> 0dedf123e02556a2dc7d7b36ed33c31cec91e255
-        <option value="$PROJECT_DIR$/Asset_Management_App/views.py" />
-        <option value="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" />
+        <option value="$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html" />
       </list>
     </option>
   </component>
-<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
-=======
-<<<<<<< HEAD
-  <component name="ProjectFrameBounds" extendedState="7">
->>>>>>> 0dedf123e02556a2dc7d7b36ed33c31cec91e255
     <option name="x" value="240" />
     <option name="y" value="135" />
     <option name="width" value="1440" />
     <option name="height" value="810" />
   </component>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 91f8549227beb074b6da21871eb470046a52cb57
->>>>>>> 0dedf123e02556a2dc7d7b36ed33c31cec91e255
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,7 +182,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="help.html&#9;FILE&#9;file://C:/Users/biyan/AppData/Local/Programs/Python/Python36-32/Lib/idlelib/help.html" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -199,89 +205,164 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="682098c6-1400-4557-8165-8e0b00ff98a6" name="Default" comment="" />
-      <created>1524509701357</created>
+      <changelist id="cfc818bb-7d83-4acb-9b67-bd67c3a784ac" name="Default" comment="" />
+      <created>1524755136289</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1524509701357</updated>
+      <updated>1524755136289</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-=======
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
->>>>>>> 91f8549227beb074b6da21871eb470046a52cb57
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24980484" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24980484" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Python Console" order="0" />
+      <window_info anchor="bottom" id="Run" order="6" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="5" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/work.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3434">
+          <caret line="202" column="7" lean-forward="true" selection-start-line="202" selection-start-column="7" selection-end-line="202" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/idlelib/help.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/allcust.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="77" column="43" lean-forward="true" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="43" />
+        <state relative-caret-position="204">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/checkin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="85" column="44" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
+        <state relative-caret-position="255">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/models.py">
-=======
-<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/checkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/lookup.html">
-=======
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/acct.html">
->>>>>>> 91f8549227beb074b6da21871eb470046a52cb57
->>>>>>> 0dedf123e02556a2dc7d7b36ed33c31cec91e255
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/newasset.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="75" column="31" lean-forward="true" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/views.py">
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/newcust.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="91" lean-forward="true" selection-start-line="17" selection-start-column="91" selection-end-line="17" selection-end-column="91" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/allcust.html">
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/oldasset.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="82" column="1" lean-forward="false" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="357">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updateacct.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updateasset.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/updatecust.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/userhelp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
         </state>
       </provider>
     </entry>
