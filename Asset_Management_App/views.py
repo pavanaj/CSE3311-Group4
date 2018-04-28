@@ -15,15 +15,15 @@ def view_accounting():
         if request.form['Action'] == "View":
             tagNo = request.form.get('tagno', None)
             serial = request.form.get('serialno', None)
-            cur = db.engine.execute("select Assets.TagNo, SerialNo, Type, Description, SoureOfFunds, ReportNo, Status,"
-                                    " Cost, CustodianID from Assets JOIN Accounts ON Assets.TagNo=Accounts.TagNo"
-                                    " WHERE Assets.TagNo = \"" + tagNo + '\" OR SerialNo = \"' + serial + '\"')
+            cur = db.engine.execute('select Assets.TagNo, SerialNo, Type, Description, SoureOfFunds, ReportNo, Status, '
+                                     'Cost, CustodianID, AquisitionDate from Assets JOIN Accounts ON Assets.TagNo=Accounts.TagNo'
+                                     ' WHERE (Assets.TagNo LIKE "' + tagNo + '%%" OR SerialNo = "' + serial + '")')
             entries = cur.fetchall()
             return render_template("acct.html", entries=entries)
 
         if request.form['Action'] == "View All":
             cur = db.engine.execute('select Assets.TagNo, SerialNo, Type, Description, SoureOfFunds, ReportNo, Status,'
-                                    ' Cost, CustodianID from Assets JOIN Accounts ON Assets.TagNo=Accounts.TagNo')
+                                    ' Cost, CustodianID, AquisitionDate from Assets JOIN Accounts ON Assets.TagNo=Accounts.TagNo')
             entries = cur.fetchall()
             return render_template("acct.html", entries=entries)
         if request.form['Action'] == "Excel":
@@ -44,7 +44,7 @@ def custodian_lookup():
         if request.form['Action'] == "Look Up":
             custID = request.form.get('empid', None)
             custName = request.form.get('name', None)
-            cur = db.engine.execute('select * from Custodians where EmpID = ' +custID+ ' OR CustName = "'+custName+'"')
+            cur = db.engine.execute('select * from Custodians where (EmpID LIKE "' + custID + '%%" OR CustName = "' +custName+ '");')
             entries = cur.fetchall()
             return render_template('allcust.html', entries=entries)
 
@@ -104,7 +104,7 @@ def asset_lookup():
             serial = request.form.get("serialno", None) #Gets serial number for asset to lookup
             cur = db.engine.execute('select TagNo, SerialNo, Type, Description, AssBldg, AssRoom, CustodianID, CustName'
                                     ' from Assets JOIN Custodians ON CustodianID = EmpID'
-                                    ' where TagNo = "' + tag + '" OR SerialNo = "' + serial + '" ')
+                                    ' where TagNo LIKE "' + tag + '%%" OR SerialNo = "' + serial + '" ')
             entries = cur.fetchall()
             return render_template('lookup.html', entries=entries)
         if request.form['Action'] == "View All":
@@ -352,7 +352,7 @@ def view_checked_out():
             cur = db.engine.execute('select Assets.TagNo, Assets.SerialNo, CustodianID, CustName, UTAID, Name, CheckOut, ReturnDate'
                                     ' from Assets JOIN Custodians ON CustodianID=EmpID '
                                     ' JOIN Checkout ON Assets.TagNo=Checkout.TagNo'
-                                    ' WHERE Assets.TagNo = "'+ tag + '" OR Assets.SerialNo = "'+serial+'"')
+                                    ' WHERE Assets.TagNo LIKE "'+ tag + '%%" OR Assets.SerialNo = "'+serial+'"')
             entries = cur.fetchall()
             return render_template('viewcheck.html', entries=entries)
 
@@ -381,7 +381,7 @@ def view_cust_assets():
         custID = request.form.get('empid', None)
         custName = request.form.get('name', None)
         cur = db.engine.execute('select TagNo, SerialNo, Type, Description, AssBldg, AssRoom from Assets '
-                                'where CustodianID = ' + custID)
+                                'where CustodianID LIKE "' + custID + '%%"')
         entries = cur.fetchall()
         return render_template('viewcust.html', entries=entries)
     return render_template("viewcust.html")    #Template for viewing custodian info
