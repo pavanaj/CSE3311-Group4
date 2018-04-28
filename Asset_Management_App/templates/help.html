@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-indigo w3-container">
+  <a href="index.html" class="w3-button w3-bar-item">Home</a>
+  <div class="w3-dropdown-hover">
+      <button class="w3-button">Assets</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="newasset.html" class="w3-bar-item w3-button w3-hover-orange">New Asset(New Custodian)</a>
+        <a href="oldasset.html" class="w3-bar-item w3-button w3-hover-orange">New Asset(Old Custodian)</a>
+        <a href="lookup.html" class="w3-bar-item w3-button w3-hover-orange">Lookup Asset(s)</a>
+        <a href="updateasset.html" class="w3-bar-item w3-button w3-hover-orange">Update Asset</a>
+      </div>
+  </div>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Custodians</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="newcust.html" class="w3-bar-item w3-button w3-hover-orange">New Custodian</a>
+        <a href="viewcust.html" class="w3-bar-item w3-button w3-hover-orange">View Assets</a>
+        <a href="updatecust.html" class="w3-bar-item w3-button w3-hover-orange">Update Custodian</a>
+        <a href="allcust.html" class="w3-bar-item w3-button w3-hover-orange">View Custodian(s)</a>
+      </div>
+  </div>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Checkout</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="checkout.html" class="w3-bar-item w3-button w3-hover-orange">Asset Checkout</a>
+        <a href="checkin.html" class="w3-bar-item w3-button w3-hover-orange">Asset Checkin</a>
+        <a href="viewcheck.html" class="w3-bar-item w3-button w3-hover-orange">View Checkouts</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Accounts</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="acct.html" class="w3-bar-item w3-button w3-hover-orange">View Acct Info</a>
+        <a href="updateacct.html" class="w3-bar-item w3-button w3-hover-orange">Update Acct Info</a>
+        <a href="report.html" class="w3-bar-item w3-button w3-hover-orange">File Report</a>
+      </div>
+  </div>
+    <a href="help.html" class="w3-button w3-bar-item">Help</a>
+</nav>
+
+<h2 class="w3-wide" align="center">HELP GUIDE</h2>
+
+<div class="container">
+  <form >
+      <div class="row">
+      <h3> &nbsp; <u>  Table of Contents </u> </h3>
+    </div>
+
+<ol>
+<li><a href="#New_Asset_New_Custodian">New Asset - New Custodian</a></li>
+<li><a href="#New_Asset_Old_Custodian">New Asset - Old Custodian</a></li>
+<li><a href="#Lookup_Asset">Lookup Asset</a></li>
+<li><a href="#Update_Asset">Update Asset</a></li>
+<li><a href="#New_Custodian">New Custodian</a></li>
+<li><a href="#View_Assets_Of_Custodians">View Custodian&rsquo;s Assets</a></li>
+<li><a href="#Update_Custodian">Update Custodian</a></li>
+<li><a href="#View_Custodian">View Custodian</a></li>
+<li><a href="#Asset_Checkout">Asset Checkout</a></li>
+<li><a href="#Asset_Checkin">Asset Checkin</a></li>
+<li><a href="#View_Checkouts">View Checkouts</a></li>
+<li><a href="#View_Account_Info">View Accounts Information</a></li>
+<li><a href="#Update_Account_Info">Update Account Information</a></li>
+<li><a href="#File_Report">File Report</a></li>
+</ol>
+
+<h4 id="New_Asset_New_Custodian"> &nbsp;<u>New Asset - New Custodian</u></h4>
+<ul>Adding a New Asset to the system for a New Custodian.
+    <li>Input Needed for New Asset
+        <ul>
+            <li> Tag Number - 6 digits e.g. 100001, if not fully known, 100xxx also works </li>
+            <li> Serial Number - optional, if known </li>
+            <li> Type of Asset - choose from a drop-down menu, or pick "other" </li>
+            <li> Acquisition Date - enter in yyyy-mm-dd format the date the asset was acquired </li>
+            <li> Description - short description about the asset </li>
+            <li> Building - building part of the Asset's location </li>
+            <li> Room - room no of the building </li>
+        </ul>
+    </li>
+    <li>Input Needed for a New Custodian
+        <ul>
+            <li> Custodian ID - 1000# of the Custodian of the Asset </li>
+            <li> Custodian Name - Full Name of the Custodian </li>
+            <li> Building - Building of the Custodian's office  </li>
+            <li> Room - Room No of the Custodian's office </li>
+            <li> Email - UTA email id of the Custodian</li>
+        </ul>
+    </li>
+
+    <li>Input Needed for Accounting Information
+        <ul>
+            <li> Cost - USD$ Amount of the Asset </li>
+            <li> Source of Funds - Source of Funds like Research, Grant, etc. </li>
+            <li> Status - Current Status of the Asset, choose from drop down menu  </li>
+        </ul>
+    </li>
+</ul>
+      
+<h4 id="New_Asset_Old_Custodian"> &nbsp;<u>New Asset - Old Custodian</u></h4>
+<ul>Adding a New Asset to the system for an existing Custodian.
+    <li>Input Needed for New Asset
+        <ul>
+            <li> Tag Number - 6 digits e.g. 100001, if not fully known, 100xxx also works </li>
+            <li> Serial Number - optional, if known </li>
+            <li> Type of Asset - choose from a drop-down menu, or pick "other" </li>
+            <li> Acquisition Date - enter in yyyy-mm-dd format the date the asset was acquired </li>
+            <li> Description - short description about the asset </li>
+            <li> Building - building part of the Asset's location </li>
+            <li> Room - room no of the building </li>
+            <li> ID - UTA ID number for the custodian of the asset</li>
+
+        </ul>
+    </li>
+    <li>Input needed for Accounting Information
+        <ul>
+<li> Cost - The total Dollar price of the asset given</li>
+            <li> Source of Funds - Source of Funds like Research, Grant, Personal... etc. </li>
+            <li> Status - Indicate whether the asset is in normal operation or not</li>
+        </ul>
+    </li>
+
+    <li>Input Needed for Accounting Information
+        <ul>
+            <li> Cost - USD$ Amount of the Asset </li>
+            <li> Source of Funds - Source of Funds like Research, Grant, etc. </li>
+            <li> Status - Current Status of the Asset, choose from drop down menu  </li>
+        </ul>
+    </li>
+</ul>
+      
+<h4 id="Lookup_Asset"> &nbsp;<u>Lookup Asset(s)</u></h4>
+<ul>A page used for finding assets in the database
+    <li>Input Asset Lookup
+        <ul>
+            <li> Tag Number - 6 digits e.g. 100001, if not fully known, 100xxx also works </li>
+            <li> Serial Number - optional, if known </li>        </ul>
+    </li>
+    <li>Active Functionalities
+        <ul>
+<li> Look Up - Finds assets meeting the specified input</li>
+            <li> View All - Shows all assets of the database </li>
+            <li> Excel - Export the current view into a .csv file</li>
+        </ul>
+    </li>
+
+    <li>Output
+        <ul>
+            <li> Tag Number </li>
+            <li> Serial Number </li>
+            <li> Type </li>
+            <li> Description </li>
+            <li> Building </li>
+            <li> Room </li>
+            <li> Custodian ID </li>
+            <li> Custodian Name </li>
+        </ul>
+    </li>
+</ul>
+
+      
+<h4 id="Update_Asset"> &nbsp;<u>Update Asset</u></h4>
+<ul>A page used for updating or altering asset data
+    <li>Input Asset Lookup
+        <ul>
+            <li> Tag Number - 6 digits e.g. 100001</li>
+            <li> Serial Number - If known </li>        </ul>
+    </li>
+    <li>Active Functionalities
+        <ul>
+<li> Update - Finds the asset with the given input and opens its fields for updating</li>
+	</ul>
+    <li>Update Asset Details
+        <ul><li> Serial Number</li>
+            <li> Type</li>
+            <li> Acquisition Date  </li>
+            <li> Description </li>
+            <li> Building </li>
+            <li> Room </li>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+
+
+
+<h4 id="New_Custodian"> &nbsp;<u>New Custodian</u></h4>
+<ul>A page used for adding a custodian into the database
+    <li>Input for Custodian
+        <ul>
+            <li> ID - 10 Digit UTA ID</li>
+            <li> Name - First and Last</li>
+            <li> Building - The abbreviated building acronym of the custodian's office</li>
+            <li> Room - The custodian's office room number</li>
+            <li> Email - UTA Email</li>        </ul>
+    </li>
+</ul>
+
+
+
+
+
+
+
+
+
+<h4 id="View_Assets_Of_Custodians"> &nbsp;<u>View Assets of Custodian</u></h4>
+<ul>A page used for finding assets that a specific custodian has current control over
+    <li>Input Custodian Lookup
+        <ul>
+            <li> Custodian ID - 10 Digit UTA ID</li>
+            <li> Name - First and Last</li>        </ul>
+    </li>
+    <li>Active Functionalities
+        <ul>
+<li> Look Up - Finds assets belonging to the specified Custodian</li>
+ <li> Excel - Export the current view into a .csv file</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+
+
+
+
+<h4 id="Update_Custodian"> &nbsp;<u>Update Custodian</u></h4>
+<ul>A page used for finding assets that a specific custodian has current control over.
+    <li>Input Custodian Lookup
+        <ul>
+            <li> Custodian ID - 10 Digit UTA ID</li>
+            <li> Name - First and Last</li>        </ul>
+    </li>
+    <li>Press "Update" to open the Custodian's Information 
+        <ul>
+<li> Name</li>
+<li> Building</li>
+<li> Office Room Number</li>
+<li> Email</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+
+
+
+<h4 id="View_Custodian"> &nbsp;<u>View Custodian</u></h4>
+<ul>A page used for viewing Custodians in the database
+    <li>Input Custodian Lookup
+        <ul>
+            <li> Custodian ID - 10 Digit UTA ID</li>
+            <li> Name - First and Last</li>        </ul>
+    </li>
+    <li>Active Functionalities
+        <ul>
+<li> Look Up - Finds the custodian meeting the specified input</li>
+            <li> View All - Shows all custodians in the database </li>
+            <li> Excel - Export the current view into a .csv file</li>
+        </ul>
+    </li>
+</ul>
+
+<h4 id="Asset_Checkout"> &nbsp;<u>Asset Checkout</u></h4>
+<ul>A page used for viewing Custodians in the database
+    <li>Asset Information
+        <ul>
+            <li> Tag Number</li>
+            <li> Serial Number</li>        </ul>
+    </li>
+    <li>Employee Information 
+        <ul>
+	       <li> Employee ID</li>
+            <li> Employee Name - First and Last</li>
+            <li> Employee Email - UTA Email</li>
+        </ul>
+    </li>
+    <li>Checkout Information
+        <ul>
+	       <li> Checkout Date</li>
+            <li> Expected Return Date</li>
+        </ul>
+    </li>
+</ul>
+
+<h4 id="Asset_Checkin"> &nbsp;<u>Asset Check-in</u></h4>
+<ul>A page used for marking returned Assets to the database
+    <li>Asset Information
+        <ul>
+            <li> Tag Number - 6 Digit ID</li>
+            <li> Serial Number - If Applicable</li>
+            <li> Check-in Date - Date asset was returned</li>
+        </ul>
+    </li>
+</ul>
+
+<h4 id="View_Checkouts"> &nbsp;<u>View Checked-Out Asset(s)</u></h4>
+<ul>A page used for finding assets that have already been checked-out
+    <li>Input Asset Lookup
+        <ul>
+            <li> Tag Number - 6 digits e.g. 100001, if not fully known, 100xxx also works </li>
+            <li> Serial Number - optional, if known </li>        </ul>
+    </li>
+    <li>Active Functionalities
+        <ul>
+<li> Look Up - Finds checked-out assets meeting the specified input</li>
+            <li> View All - Shows all assets of the database that are checked-out</li>
+            <li> Excel - Export the current view into a .csv file</li>
+        </ul>
+    </li>
+
+    <li>Output
+        <ul>
+            <li> Tag Number </li>
+            <li> Serial Number </li>
+            <li> Custodian ID </li>
+            <li> Custodian Name </li>
+            <li> Employee ID </li>
+            <li> Employee Name </li>
+            <li> Checkout Date </li>
+            <li> Expected Return Date </li>
+        </ul>
+    </li>
+</ul>
+
+<h4 id="View_Account_Info"> &nbsp;<u>View Accounts Information</u></h4>
+<ul>A page used for viewing account information
+    <li>Input Asset Lookup
+        <ul>
+            <li> Tag Number - 6 digits e.g. 100001, if not fully known, 100xxx also works </li>
+            <li> Serial Number - optional, if known </li>        </ul>
+    </li>
+    <li>Active Functionalities
+        <ul>
+<li> View - Finds accounts meeting the specified input</li>
+            <li> View All - Shows all assets and their respective accounts in the database</li>
+            <li> Excel - Export the current view into a .csv file</li>
+        </ul>
+    </li>
+
+    <li>Output
+        <ul>
+            <li> Tag Number </li>
+            <li> Serial Number </li>
+            <li> Type </li>
+            <li> Description </li>
+            <li> Fund Source </li>
+            <li> Report Number </li>
+            <li> Status </li>
+            <li> Cost </li>
+            <li> Custodian </li>
+        </ul>
+    </li>
+</ul>
+
+<h4 id="Update_Account_Info"> &nbsp;<u>Update Account Information</u></h4>
+<ul>A page used for altering and updating the asset account information.
+    <li>Input Account Lookup
+        <ul>
+            <li> Tag Number - 6 Digit ID</li>
+            <li> Serial Number - If Known</li>        </ul>
+    </li>
+    <li>Press "Update" to open the Account's Information 
+        <ul>
+<li> Cost</li>
+<li> Source of Funds</li>
+<li> Status</li>        </ul>
+    </li>
+</ul>
+
+<h4 id="File_Report"> &nbsp;<u>File Asset Report</u></h4>
+<ul>A page for filing reports for missing or stolen assets
+    <li>Input Account Lookup
+        <ul>
+            <li> Tag Number - 6 Digit ID</li>
+            <li> Serial Number - If Known</li>        </ul>
+    </li>
+    <li>Report Information
+        <ul>
+<li> New Status - To reflect the current state of the asset</li>
+<li> Report Nnmber - Corresponding Police Report Number</li>
+<li> Report Date - Date the police report was made</li>        </ul>
+    </li>
+</ul>
+  </form>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-padding-30 w3-center w3-orange">
+  <p class="w3-medium">
+  <img src="{{url_for('static', filename='AMA.png')}}" height='100' width='250' />
+  </p>
+  <p>
+    <h4> Developers: Pavanaj Biyani | Ethan Duff | Kevin Williams </h4>
+  </p>
+</footer>
+
+</body>
+</html>

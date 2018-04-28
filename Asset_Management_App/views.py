@@ -387,7 +387,7 @@ def view_cust_assets():
     return render_template("viewcust.html")    #Template for viewing custodian info
 
 #Route for WIP page
-@app.route('/work.html', methods=['GET', 'POST'])
-def maintenance_error():
-    return render_template("work.html")    #Template for WIP page
+@app.route('/help.html', methods=['GET', 'POST'])
+def help():
+    return render_template("help.html")    #Template for WIP page
 
