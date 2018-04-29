@@ -87,7 +87,7 @@ def asset_checkin():
 
         new = models.Checkout.query.filter((models.Checkout.tagNo == tagNo) | (models.Checkout.serNo == serialNo)).\
         first() #Find tuple with tag number of serial number of asset being checked in and updates
-        new.checkin = checkIn
+        db.session.delete(new)
         db.session.commit()            #Commit transaction to database
     return render_template("checkin.html")  #Template for checking in an asset
 
@@ -421,6 +421,16 @@ def view_cust_assets():
                                     ' where CustName LIKE "%%' + custname + '%%"')
             entries = cur.fetchall()
             return render_template('viewcust.html', entries=entries)
+        if request.form['Action'] == "Excel":
+            cur = db.engine.execute('select * from Assets JOIN Custodians on CustodianID = EmpID')
+            entries = cur.fetchall()
+            with open('CustAssets.csv', 'w') as out:
+                printFile = csv.writer(out)
+                printFile.writerow(['Tag No', 'Serial No', 'Description', 'Type', 'CustID', 'Acquisition Date',
+                                    'Building', 'Room', 'Status', 'UTAID', 'Name', 'Email', 'CustBuilding', 'CustRoom'])
+                for entry in entries:
+                    printFile.writerow(entry)
+            return render_template('viewcust.html')
 
     return render_template("viewcust.html")    #Template for viewing custodian info
 
