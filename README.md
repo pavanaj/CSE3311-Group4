@@ -2,7 +2,7 @@
  <img src="https://raw.githubusercontent.com/pavanaj/CSE3311-Group4/master/AMA logo.png"/>
 </p>
 
-# CSE3311-Group4
+# CSE3311 - Group4
 This is a Git repository for a Software Engineering Team Project for a Web application for Asset/Inventory Management for UTA's CSE department. 
 
 ## Members
@@ -10,25 +10,29 @@ This is a Git repository for a Software Engineering Team Project for a Web appli
 * Ethan Duff
 * Kevin Williams
 
-## Tools & Libraries Used
-* MySQL
-* HTML & CSS
-* Python - Flask, Jinja2
+## Current Status - Final Iteration
+* Fully Navigable User Interface
+* Add and Update assets, accounts, and custodians
+* View any and all stored data based on specified criteria
+* Record when an Asset has been taken off-campus
+* Record when an Asset is checked into the system
+* Handle stolen, surplus or lost assets by creating reports
+* Export results as Excel files to facilitate use outside the system
 
-## Current Status - Iteration 3
-* Finalized DB Schema
-* Mock data ready to use to test
-* Website completed
-* Application-MySQL integration completed
-  
-## Features
-* Streamline the asset management system currently in place at the UTA CSE department. 
-* The system will have the ability to access individual asset and custodian records, accounting information and off-campus checkouts. 
-* Simple and clean UI for non-technical personnel to make changes to the database.
+## Technologies/Libraries
+* Front End - HTML, CSS, Javascript, jQuery
+* Middle Logic - Flask, Jinja2, SQLAlchemy
+* Back End - Python, MySQL
 
-## How to Run
-* set FLASK_APP = "run.py"
+## Tools/IDEs
+* PyCharm
+* MySQL Workbench
+* GitHub
+* PowerShell
+
+## How to Run 
+* set FLASK_APP = "run.py" (Windows) OR export FLASK_APP = "run.py" (Linux/Unix)
+
 * flask run
 
 * Go to http://127.0.0.1:5000
-
