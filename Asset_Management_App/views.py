@@ -12,12 +12,19 @@ def index():
 @app.route('/acct.html', methods=['GET','POST'])
 def view_accounting():
     if request.method == 'POST':
-        if request.form['Action'] == "View":
+        if request.form['Action'] == "View T/N":
             tagNo = request.form.get('tagno', None)
+            cur = db.engine.execute('select Assets.TagNo, SerialNo, Type, Description, SoureOfFunds, ReportNo, Status, '
+                                     'Cost, CustodianID, AquisitionDate from Assets JOIN Accounts ON Assets.TagNo=Accounts.TagNo'
+                                     ' WHERE Assets.TagNo LIKE "%%' + tagNo + '%%"')
+            entries = cur.fetchall()
+            return render_template("acct.html", entries=entries)
+
+        if request.form['Action'] == "View S/N":
             serial = request.form.get('serialno', None)
             cur = db.engine.execute('select Assets.TagNo, SerialNo, Type, Description, SoureOfFunds, ReportNo, Status, '
                                      'Cost, CustodianID, AquisitionDate from Assets JOIN Accounts ON Assets.TagNo=Accounts.TagNo'
-                                     ' WHERE (Assets.TagNo LIKE "' + tagNo + '%%" OR SerialNo = "' + serial + '")')
+                                     ' WHERE SerialNo LIKE "%%' + serial + '%%"')
             entries = cur.fetchall()
             return render_template("acct.html", entries=entries)
 
@@ -41,10 +48,15 @@ def view_accounting():
 @app.route('/allcust.html', methods=['GET','POST'])
 def custodian_lookup():
     if request.method == 'POST':
-        if request.form['Action'] == "Look Up":
+        if request.form['Action'] == "Look Up UTA ID":
             custID = request.form.get('empid', None)
+            cur = db.engine.execute('select * from Custodians where EmpID LIKE "%%' + custID + '%%"')
+            entries = cur.fetchall()
+            return render_template('allcust.html', entries=entries)
+
+        if request.form['Action'] == "Look Up Name":
             custName = request.form.get('name', None)
-            cur = db.engine.execute('select * from Custodians where (EmpID LIKE "' + custID + '%%" OR CustName = "' +custName+ '");')
+            cur = db.engine.execute('select * from Custodians where CustName LIKE "%%' +custName+ '%%"')
             entries = cur.fetchall()
             return render_template('allcust.html', entries=entries)
 
@@ -62,6 +74,7 @@ def custodian_lookup():
                 for entry in entries:
                     printFile.writerow(entry)
             return render_template("allcust.html")
+
     return render_template("allcust.html") #Template for use viewing custodian information
 
 #Route for page for checking in a checked out asset
@@ -99,19 +112,28 @@ def asset_checkout():
 @app.route('/lookup.html', methods=['GET', 'POST'])
 def asset_lookup():
     if request.method == 'POST':                #Checks for method from template
-        if request.form['Action'] == "Look Up":
+        if request.form['Action'] == "Look Up T/N":
             tag = request.form.get("tagno", None)   #Gets tag number for asset to lookup
+            cur = db.engine.execute('select TagNo, SerialNo, Type, Description, AssBldg, AssRoom, CustodianID, CustName'
+                                    ' from Assets JOIN Custodians ON CustodianID = EmpID'
+                                    ' where TagNo LIKE "%%' + tag + '%%"')
+            entries = cur.fetchall()
+            return render_template('lookup.html', entries=entries)
+
+        if request.form['Action'] == "Look Up S/N":
             serial = request.form.get("serialno", None) #Gets serial number for asset to lookup
             cur = db.engine.execute('select TagNo, SerialNo, Type, Description, AssBldg, AssRoom, CustodianID, CustName'
                                     ' from Assets JOIN Custodians ON CustodianID = EmpID'
-                                    ' where TagNo LIKE "' + tag + '%%" OR SerialNo = "' + serial + '" ')
+                                    ' where SerialNo LIKE "%%' + serial + '%%"')
             entries = cur.fetchall()
             return render_template('lookup.html', entries=entries)
+
         if request.form['Action'] == "View All":
             cur = db.engine.execute('select TagNo, SerialNo, Type, Description, AssBldg, AssRoom, CustodianID, CustName'
                                     ' from Assets JOIN Custodians ON CustodianID = EmpID')
             entries = cur.fetchall()
             return render_template('lookup.html', entries=entries)
+
         if request.form['Action'] == "Excel":
             cur = db.engine.execute('select * from Assets')
             entries = cur.fetchall()
@@ -345,14 +367,21 @@ def update_custodian():
 @app.route('/viewcheck.html', methods=['GET', 'POST'])
 def view_checked_out():
     if request.method == 'POST':
-        if request.form['Action'] == "View":
+        if request.form['Action'] == "View T/N":
             tag = request.form.get('tagno')
-            serial = request.form.get('serialno')
-
             cur = db.engine.execute('select Assets.TagNo, Assets.SerialNo, CustodianID, CustName, UTAID, Name, CheckOut, ReturnDate'
                                     ' from Assets JOIN Custodians ON CustodianID=EmpID '
                                     ' JOIN Checkout ON Assets.TagNo=Checkout.TagNo'
-                                    ' WHERE Assets.TagNo LIKE "'+ tag + '%%" OR Assets.SerialNo = "'+serial+'"')
+                                    ' WHERE Assets.TagNo LIKE "%%' + tag + '%%"')
+            entries = cur.fetchall()
+            return render_template('viewcheck.html', entries=entries)
+
+        if request.form['Action'] == "View S/N":
+            serial = request.form.get('serialno')
+            cur = db.engine.execute('select Assets.TagNo, Assets.SerialNo, CustodianID, CustName, UTAID, Name, CheckOut, ReturnDate'
+                                    ' from Assets JOIN Custodians ON CustodianID=EmpID '
+                                    ' JOIN Checkout ON Assets.TagNo=Checkout.TagNo'
+                                    ' WHERE Assets.SerialNo LIKE "%%'+serial+'%%"')
             entries = cur.fetchall()
             return render_template('viewcheck.html', entries=entries)
 
@@ -378,15 +407,24 @@ def view_checked_out():
 @app.route('/viewcust.html', methods=['GET', 'POST'])
 def view_cust_assets():
     if(request.method == 'POST'):
-        custID = request.form.get('empid', None)
-        custName = request.form.get('name', None)
-        cur = db.engine.execute('select TagNo, SerialNo, Type, Description, AssBldg, AssRoom from Assets '
-                                'where CustodianID LIKE "' + custID + '%%"')
-        entries = cur.fetchall()
-        return render_template('viewcust.html', entries=entries)
+        if request.form['Action'] == "Look Up ID":
+            custID = request.form.get('empid', None)
+            cur = db.engine.execute('select TagNo, SerialNo, Type, Description, AssBldg, AssRoom from Assets '
+                                ' where CustodianID LIKE "%%' + custID + '%%"')
+            entries = cur.fetchall()
+            return render_template('viewcust.html', entries=entries)
+
+        if request.form['Action'] == "Look Up Name":
+            custname = request.form.get('name', None)
+            cur = db.engine.execute('select TagNo, SerialNo, Type, Description, AssBldg, AssRoom, EmpID, CustName'
+                                    ' from Assets JOIN Custodians ON CustodianID = EmpID'
+                                    ' where CustName LIKE "%%' + custname + '%%"')
+            entries = cur.fetchall()
+            return render_template('viewcust.html', entries=entries)
+
     return render_template("viewcust.html")    #Template for viewing custodian info
 
-#Route for WIP page
+#Route for Help page
 @app.route('/help.html', methods=['GET', 'POST'])
 def help():
     return render_template("help.html")    #Template for WIP page
