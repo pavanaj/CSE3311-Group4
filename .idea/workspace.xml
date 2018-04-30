@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5944c0b-1cbd-4c6c-9695-47c604d23746" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/help.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Asset_Management_App/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Custodians.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Custodians.csv" afterDir="false" />
-    </list>
+    <list default="true" id="e5944c0b-1cbd-4c6c-9695-47c604d23746" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
