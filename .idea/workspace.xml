@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="e5944c0b-1cbd-4c6c-9695-47c604d23746" name="Default" comment="" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="cfc818bb-7d83-4acb-9b67-bd67c3a784ac" name="Default" comment="" />
+=======
+    <list default="true" id="e5944c0b-1cbd-4c6c-9695-47c604d23746" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/acct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/allcust.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/help.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/lookup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/viewcheck.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/templates/viewcust.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Asset_Management_App/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Asset_Management_App/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Custodians.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Custodians.csv" afterDir="false" />
+    </list>
+>>>>>>> d6846ea605c712174b9167309534b3b9aa20e449
+>>>>>>> 53d606e0971a1295aea3b7c2db160c0b3f40668f
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
