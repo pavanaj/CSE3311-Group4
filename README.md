@@ -20,9 +20,9 @@ This is a Git repository for a Software Engineering Team Project for a Web appli
 * Export results as Excel files to facilitate use outside the system
 
 ## Technologies/Libraries
-* Front End - HTML, CSS, Javascript, jQuery
-* Middle Logic - Flask, Jinja2, SQLAlchemy
-* Back End - Python, MySQL
+* Front End (Web Interface) - HTML, CSS, Javascript, jQuery
+* Middle Logic (API) - Python Flask API, Jinja2, SQLAlchemy
+* Back End (Database) - MySQL
 
 ## Tools/IDEs
 * PyCharm
