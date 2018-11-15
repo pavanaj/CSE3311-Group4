@@ -9,7 +9,7 @@ Tag No.,Serial No,Description,Type,Custodian ID,Acquisition Date,Building,Room,S
 000008,H76zQ6m0,"Dell desktop computer, 2.6 ghz, 8 gigs of ram",Desktop,1000000002,2017-10-30,ERB,641,Active
 000009,1123Fn94,Acer Inspire Laptop 2.8 ghz,Laptop,1000000010,2017-11-11,ELB,211,Active
 000010,36BsUI58,IBM Laptop 14 inch 2.2 ghz,Laptop,1000000009,2017-05-11,ERB,622,Surplus
-000011,78JiX0vC,White MacBook 4.2 ghz,Laptop,1000000017,2018-01-20,NH,432,Active
+000011,78JiX0vC,White MacBook 4.2 ghz,desktop,1000000017,2018-01-20,NH,400,Active
 000012,YE23vMiK,"HP Desktop computer, 2.0  ghz 12 gb of ram",Desktop,1000000001,2017-09-27,ERB,331,Active
 000013,03bDE48N,Canon 13MP black,Camera,1000000007,2017-12-25,ERB,542,Active
 000014,J9f72aDo,"HP Desktop, 3.2 ghz",Desktop,1000000005,2017-01-15,ERB,333,Surplus
@@ -17,5 +17,5 @@ Tag No.,Serial No,Description,Type,Custodian ID,Acquisition Date,Building,Room,S
 000016,8lmAq6kP,"HP 13 inch laptop, 3.0 ghz",Laptop,1000000020,2018-02-10,ERB,432,Active
 000017,Ka73Hu9s,"Lenovo Desktop Computer, 2.8 ghz",Desktop,1000000018,2017-11-19,ERB,601,Missing(Stolen)
 000018,P05kN4bQ,"iPad 2, White",Tablet,1000000008,2017-12-05,ERB,543,Active
-000019,266naFt0,"Dell 15 inch laptop, black",desktop,1000000012,2018-04-01,ERB,360,Missing(Hold for Deletion)
+000019,266na0bh,"Dell 15 inch laptop, black",desktop,1000000012,2018-04-01,ERB,360,Missing(Hold for Deletion)
 000020,L3nA47ls,Minolta 15MP white,Camera,1000000015,2018-01-19,ERB,650,Active
