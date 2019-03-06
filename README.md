@@ -3,7 +3,7 @@
 </p>
 
 # CSE3311 - Group4
-This is a Git repository for a Software Engineering Team Project for a Web application for Asset/Inventory Management for UTA's CSE department. 
+ Web application for a Software Engineering Team Project for an Asset/Inventory Management System for UTA's CSE department.
 
 ## Members
 * Pavanaj Biyani 
