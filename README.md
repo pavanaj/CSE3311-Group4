@@ -7,7 +7,6 @@ This is a Git repository for a Software Engineering Team Project for a Web appli
 
 ## Members
 * Pavanaj Biyani 
-* Ethan Duff
 * Kevin Williams
 
 ## Current Status - Final Iteration
